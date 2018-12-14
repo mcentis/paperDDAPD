@@ -89,28 +89,49 @@ Their timing performance was characterised using a pulsed infrared laser.
 
 \section{Introduction}
 
-As has long been recognized, the trend toward higher luminosities in hadron colliders has stressed the ability of detectors to resolve multiple interactions (so-called in time pileup). The luminosity for a given stored beam energy is maximized by concentrating the particle beams in as few bunches as possible. In the past, the physics object resolving time of hadron collider experiments has exceeded the typical time envelope of a bunch with the result that
-as luminosities (ie interaction rates) increase, unresolved multiple interactions potentially result in backgrounds to real physics processes under study.
+The high luminosity upgrade of the CERN Large Hadron Collider (HL-LHC) foreseen to start in 2026 will provide an instantaneous luminosity of up to $5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$ with a bunch spacing of 25\,ns, and an average pile-up of up to 200 collisions per bunch crossing\,\cite{hlLhcTecDesRep}.
+This value of pile-up presents a challenge for the experiments, as currently ATLAS and CMS have reached a typical pile-up of $\approx 30$ \textcolor{red}{ref?}.
+At the present, the effects of pile-up on physics analyses are mitigated by resolving the primary vetexes within one bunch crossing along the beam axis.
+The physics objects are then associated to the primary vertexes.
+This strategy was used also at Tevatron, where the pile-up was $\appox 6$ \textcolor{red}{ref?}.
+The pile-up at HL-LHC will pose a challenge to this method, as a significant fraction of the primary vertexes will have a distance smaller than the resolution of the vertex detectors, making an association to the physics objects impossible.
 
-In the 1990's at the Tevatron the pileup rate reached $\sim6$ interactions/event. Today ATLAS and CMS have reached typical pileup of $\sim30$. Looking ahead to the High Luminosity upgrades intended for 2026, the upgraded detectors will need to cope with a pileup level of $\sim200$, according to the HL-LHC designs specs for an ultimate luminosity of up to $7.5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$. The preliminary designs of next generation machines- the High Energy LHC or the Future Circular Collider- would push this pileup by another order of magnitude.
+A different method to reconstruct the primary vertexes relies on the measurement of the time of creation of the particles traversing the detectors.
+A sufficently accurate time measurement effectively reduces the vertex density, improving the vertex reconstruction capability of the experiments.
+Since the RMS spread of the primary vertexes at HL-LHC is foreseen to be $\approx$ 170 ps within one bunch crossing, a minimum ionising particle (MIP) time resolution of $\approx 30$ ps is necessary for a correct association of the particles to their primary vertexes\textcolor{red}{ref?}.
 
-An early tool for coping with pileup (ie CDF/Tevatron in the 1990's) relied on the ability of the inner tracking system to resolve the position of the individual interaction points along the beam and associate physics objects with the correct 
-interaction point. Since the interaction time spread (due to the finite bunch lengths) could be similarly used to complement this tracking capability, the possibility of adding timing layers in the HL-LHC upgrades, for example, has been proposed\,\cite{CHEF}, and both ATLAS and CMS are currently planning such upgrades.
+To reach this performance, dedicated detector systems will be needed and both ATLAS and CMS are planning such upgrades\,\cite{cmsMIPtiming,atlasMIPtiming}.
 
-Roughly coincident with this renewed interest in sub 50 picosecond timing there has been recent work evaluating a number of promising technologies as can be found for example in the review of Vavra \cite{Vavra}.
+%% As has long been recognized, the trend toward higher luminosities in hadron colliders has stressed the ability of detectors to resolve multiple interactions (so-called in time pileup).
+%% The luminosity for a given stored beam energy is maximized by concentrating the particle beams in as few bunches as possible.
+%% In the past, the physics object resolving time of hadron collider experiments has exceeded the typical time envelope of a bunch with the result that as luminosities (ie interaction rates) increase, unresolved multiple interactions potentially result in backgrounds to real physics processes under study.
+
+%% In the 1990's at the Tevatron the pileup rate reached $\sim6$ interactions/event. Today ATLAS and CMS have reached typical pileup of $\sim30$.
+%% Looking ahead to the High Luminosity upgrades intended for 2026, the upgraded detectors will need to cope with a pileup level of $\sim200$, according to the HL-LHC designs specs for an ultimate luminosity of up to $7.5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$.
+%% The preliminary designs of next generation machines- the High Energy LHC or the Future Circular Collider- would push this pileup by another order of magnitude.
+
+%% An early tool for coping with pileup (ie CDF/Tevatron in the 1990's) relied on the ability of the inner tracking system to resolve the position of the individual interaction points along the beam and associate physics objects with the correct interaction point.
+%% Since the interaction time spread (due to the finite bunch lengths) could be similarly used to complement this tracking capability, the possibility of adding timing layers in the HL-LHC upgrades, for example, has been proposed\,\cite{CHEF}, and both ATLAS and CMS are currently planning such upgrades.
+
+%% Roughly coincident with this renewed interest in sub 50 picosecond timing there has been recent work evaluating a number of promising technologies as can be found for example in the review of Vavra \cite{Vavra}.
+
+
+
 %The high luminosity upgrade of the CERN Large Hadron Collider (HL-LHC) foreseen to start in 2026 will provide an instantaneous luminosity of up to $5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$ with a bunch spacing of 25\,ns, and an average pile-up of up to 200 collisions per bunch crossing\,\cite{hlLhcTecDesRep}.
 %To reduce the effects of pile-up on the physics analyses, both the ATLAS and CMS experiments are planning to implement dedicated systems to measure the time of arrival of minimum ionising particles (MIPs) with an accuracy of about 30 ps.
 %By providing the time of arrival information of MIPs, these systems allow for the correct association of particles to their primary vertexes in the case where the latter have a proximity in space that renders their separation impossible.
 %An improved time of arrival resolution would also effectively reduce the vertex density, and improve the vertex reconstruction capability of the experiments.
 %These timing detectors will be subjected to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of up to $10^{15}$\,cm$^{-2}$ for the goal integrated luminosity of HL-LHC of 3000\,fb$^{-1}$.
 
-%By exploiting the design margins of HL-LHC, it will be possible to achieve an ultimate luminosity of up to $7.5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$ and an ultimate integrated luminosity of 4000\,fb$^{-1}$\,\cite{hlLhcTecDesRep}.
-%In this scenario the pile-up and fluence to which the detectors will be exposed will increase proportionally to the instantaneous and integrated luminosity, respectively.
+By exploiting the design margins of HL-LHC, it will be possible to achieve an ultimate luminosity of up to $7.5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$ and an ultimate integrated luminosity of 4000\,fb$^{-1}$\,\cite{hlLhcTecDesRep}.
+In this scenario the pile-up and fluence to which the detectors will be exposed will increase proportionally to the instantaneous and integrated luminosity, respectively.
 
 %Different detector technologies are studied for the realization of the MIP timing systems.
 %Silicon photomultipliers (SiPMs) coupled to scintillating crystals and low gain avalanche devices (LGADs) constitute currently the baseline technology choosen by ATLAS and CMS\,\cite{cmsMIPtiming,atlasMIPtiming}.
 
-As it happens, all of the proposed technologies for ATLAS and CMS timing layers involve Silicon with Internal gain: Silicon Photo Multipliers (SiPMs) or Low Gain Avalanche Diodes(LGADs) \cite{cmsMIPtiming,atlasMIPtiming}. We have evaluated a high gain Avalanche diode structure with a capacitively coupled readout for charged particle timing in applications where a pixel size of order 1 cm$^{2}$ is appropriate, i.e. 2 orders of magnitude larger than low gain designs contemplated for the ATLAS and CMS endcap timing detectors.
+All the proposed technologies for ATLAS and CMS timing layers involve silicon with snternal gain: Silicon Photomultipliers (SiPMs) or Low Gain Avalanche Diodes (LGADs)\,\cite{cmsMIPtiming,atlasMIPtiming}.
+In this context, avalanche silicon diode structures with a capacitively coupled readout for charged particle timing were evaluated.
+The characteristics of these detectors make them suitable for applications where a pixel size of order of 1 cm$^{2}$ is appropriate.
 
 This paper summarizes the characterization of deep diffused Avalanche Photo Diodes (APDs) produced by Radiation Monitoring Devices\,\cite{rmdAddress} used as timing detectors for charged particles.
 Studies of these sensors as Minimum Ionising Particle (MIP) timing detectors, using an AC-coupled readout, were performed previously and showed promising results\,\cite{white2014}.
@@ -671,6 +692,8 @@ Detectors with both DC- and AC-coupled readout will be characterised in beam tes
 The determination of time resolution, uniformity of response, and detection efficiency are the aim of the beam tests.
 The time resolution measurements with charged particles will include the \textit{Landau noise} term.
 A comparison with the jitter obtained with infrared light will provide a direct measurement of how this effect influences the time resolution in these devices.
+
+\textcolor{red}{The conclusions for the beam test and gain part have to be written}
 
 \section*{Acknowledgments}
 
