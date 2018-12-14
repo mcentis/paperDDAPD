@@ -7,6 +7,7 @@
 \usepackage{authblk} % authors and affiliations
 \usepackage{hyperref}
 \usepackage{subfig}
+\usepackage{xcolor}
 
 \graphicspath{{./figures/}}
 
@@ -244,23 +245,30 @@ In this paper detectors with both the DC-coupled mesh readout are characterised,
 %The reason that we have chosen to use a semi-transparent mesh electrode for the capacitive readout is to leave open the possibility of laser testing, which complements the charged particle response measurements.
 
 \section{Gain Measurement of $8 \times 8$ mm$^2$ APDs using a Blue LED}
+\label{sec:gain8x8led}
 %The gain was measured using a red (430nm?) laser pulse impinging on the top surface (Fig.1, left). Photoelectrons released in the upper low field region then drift toward the junction
 %and undergo multiplication by impact ionization (internal gain). The magnitude of this gain is set by decreasing the E-field to an asymptotically low value where multiplication stops (G=1).
 %A summary of such measurements is shown in (Figure: Gain) for a range of operating temperatures. As can be seen from this figure, the Gain for a given detector bias decreases with increasing temperature.
 %In fact, the data plotted in (Figure:Gain) all roughly coincide with a voltage scaling that corresponds to roughly to $\delta$V$\sim-2.45$V per deg. C.
 
-RMD 8x8mm 2 avalanche diode Gain vs. bias voltage response for 20 nsec(wide ?) 425nm led pulses.
-Unity gain refers to the amplitude obtained at the ~500V bias where amplitude is roughly V independent. 
-An attempt was made to parametrize regular trend in V required for a given gain vs. T by an ad hoc re-scaling of V’ = V-2.45*T( 0 C).
-This parametrization of the pattern up to Gain~1000 may prove useful for discriminating among impact ionization models that appear in the literature and as options in ,eg SILVACO TM for modeling such devices.
+The gain of $8 \times 8$ mm$^2$ APDs was measured using a pulsed LED.
+The LED had a wavelength of 425 nm and the pulses had a duration of 20 ns.
+\textcolor{red}{Readout ?}
+Unity gain refers to the amplitude obtained at $\approx$500 V bias, where the amplitude shows a weack dependence on the bias voltage $V$. 
+The measurements were performed at different temperatures, and the results are reported in figure\,\ref{fig:gainVsV}.
+An attempt was made to parametrize regular trend in $V$ required for a given gain as a function of temperature $T$.
+A temperature dependent shift $V' = V -2.45 \cdot T( 0 C)$ describes the change in voltage necessary to obtain a given value of gain when the APD temperature changes.
+\textcolor{red}{What does the (0C) mean in this case? Does the shift refer to the 0C curve?}
+This parametrization of the pattern up to a gain of $\approx$1000 may prove useful for discriminating among impact ionization models that appear in the literature and as options in TCAD\footnote{Technology Computer Aided Design} software for modeling such devices.
 It should be noted that this particular definition of gain, as it applies to visible light photodetection in an APD, will likely differ from the response to minimum ionizing particles (or the IR laser model used) since, in the former case all photoelectrons traverse the region where impact ionization occurs.
+\textcolor{red}{Another difference could be the focusing? Was the light focussed? Which was the intensity?}
 
 \begin{figure}
   \centering
   \subfloat{\includegraphics[width = 0.6 \textwidth]{gainVsV}}
   \hfill
   \subfloat{\includegraphics[width = 0.4 \textwidth]{gainVsVscaled}}
-  \caption{\textbf{Left:} \textbf{Right:} Gain Measurements of 8x8 mm RMD APDs measured w 430 nm laser pulses.}
+  \caption{\textbf{Left:} Gain measurement of $8 \times 8$ mm$^2$ APDs at different temperatures using a blue LED. \textbf{Right:} By shifting the bias for each curve according to the law described in the test, it is possible to superimpose all curves.}
   \label{fig:gainfig}
 \end{figure}
 
