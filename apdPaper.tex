@@ -54,15 +54,22 @@
 \maketitle
 
 \begin{abstract}
-For their operation at the CERN High Luminosity Large Hadron Collider (HL-LHC), the ATLAS and CMS experiments are planning to implement dedicated systems to measure the time of arrival of minimum ionising particles with an accuracy of about 30 ps.
-The timing detectors will be subjected to radiation levels corresponding up to a 1-MeV neutrons fluence ($\Phi_{eq}$) of $10^{15}$\,cm$^{-2}$ for the goal integrated luminosity of HL-LHC of 3000 fb$^{-1}$.
+The high luminosity upgrade of the CERN Large Hadron Collider (HL-LHC) will result in a pile-up of around 200 proton-proton collisions per bunch crossing.
+In order to reduce the impact of pile-up on physics analyses the ATLAS and CMS experiments are planning to use the timing of physics objects within one event.
+The primary proton-proton collisions have an RMS spread of $\approx$170 ps within one bunch crossing, and a time resolution of around 30 ps is require for pile-up mitigation.
+This performance requires dedicated detectors for the timing of minimum ionising particles.
+The timing detectors will be subjected, for the goal integrated luminosity of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap regions, respectively.
+
+%% For their operation at the CERN High Luminosity Large Hadron Collider (HL-LHC), the ATLAS and CMS experiments are planning to implement dedicated systems to measure the time of arrival of minimum ionising particles with an accuracy of about 30 ps.
+%% The timing detectors will be subjected to radiation levels corresponding up to a 1-MeV neutrons fluence ($\Phi_{eq}$) of $10^{15}$\,cm$^{-2}$ for the goal integrated luminosity of HL-LHC of 3000 fb$^{-1}$.
   
 In this paper, deep diffused Avalanche Photo Diodes (APDs) produced by Radiation Monitoring Devices are examined as candidate timing detectors for HL-LHC applications.
 To improve the detector's timing performance, the APDs are used to directly detect the traversing particles, without a radiator medium where light is produced.
 These APDs are operated at 1.8\,kV, resulting in a gain of up to 500.
+The detectors have an active area of up to $8 \times 8$ mm$^2$, close to the channel size of the CMS barrel timing layer.
 %The performance of the detectors is evaluated using both laboratory characterisations and beam tests.
 
-Devices with an active area of $8 \times 8$\,mm$^2$ were characterised using a pulsed infrared laser.
+Devices with an active area of $8 \times 8$\,mm$^2$ were characterised using a pulsed infrared laser and, in some cases, an high energy muon beam.
 The timing performance as well as the uniformity of response are examined in this paper.
 
 The effects of radiation damage on current, signal amplitude, noise, and timing of the APDs are evaluated using detectors with an active area of $2 \times 2$\,mm$^2$.
@@ -70,18 +77,9 @@ These detectors were irradiated with neutrons up to $\Phi_{eq} = 10^{15}$\,cm$^{
 Their timing performance was characterised using a pulsed infrared laser.
 
 
-
-Recently, the focus on upgrades for the High Luminosity LHC (HL-LHC) era- where the interaction rate will increase to ~200 times the frame rate, greatly increasing the incidence of pileup induced background- has highlighted physics object timing as a tool to resolve multiple interactions within a frame (ie event). Since a frame captures a single proton bunch crossing with rms time spread of 170 picoseconds, a time resolution of $<50$ picoseconds or better is needed. What is particularly novel in the LHC application is rate and radiation hardness requirements.
-In particular, planned ATLAS and CMS charged particle timing layers in the barrel or endcap regions must survive radiation levels corresponding up to a 1-MeV neutron equivalent fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ during the lifetime of the HL-LHC, respectively. 
-In this paper we report on initial characterization of a Silicon based technology which would be suitable for large ($\sim1$cm$^{2}$) pixel size, as in the CMS barrel and high internal gain (ie yielding ionization signals of ~6x10$^{3}$ x [$G_{Internal}$=300] electrons/MIP). The silicon sensor uses Deep Depleted Avalanche Diodes produced by Radiation Monitoring Devices. 
-
-Devices with an active area of $8 \times 8$\,mm$^2$ were characterized using a pulsed infrared laser and, in some cases, with a high energy muon beam.
-The timing performance as well as the uniformity of response are examined in this paper.
-
-Here we report primarily on damage by neutron irradiation, which degrades the internal gain.
-The effects of radiation damage on current, signal amplitude, noise, and timing of the APDs are evaluated using detectors with an active area of $2 \times 2$\,mm$^2$.
-These detectors were irradiated with neutrons up to $\Phi_{eq} = 10^{15}$\,cm$^{-2}$.
-Their timing performance was characterised using a pulsed infrared laser.
+%% Recently, the focus on upgrades for the High Luminosity LHC (HL-LHC) era- where the interaction rate will increase to ~200 times the frame rate, greatly increasing the incidence of pileup induced background- has highlighted physics object timing as a tool to resolve multiple interactions within a frame (ie event). Since a frame captures a single proton bunch crossing with rms time spread of 170 picoseconds, a time resolution of $<50$ picoseconds or better is needed. What is particularly novel in the LHC application is rate and radiation hardness requirements.
+%% In particular, planned ATLAS and CMS charged particle timing layers in the barrel or endcap regions must survive radiation levels corresponding up to a 1-MeV neutron equivalent fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ during the lifetime of the HL-LHC, respectively. 
+%% In this paper we report on initial characterization of a Silicon based technology which would be suitable for large ($\sim1$cm$^{2}$) pixel size, as in the CMS barrel and high internal gain (ie yielding ionization signals of ~6x10$^{3}$ x [$G_{Internal}$=300] electrons/MIP). The silicon sensor uses Deep Depleted Avalanche Diodes produced by Radiation Monitoring Devices. 
 
 \end{abstract}
 
@@ -272,7 +270,6 @@ It should be noted that this particular definition of gain, as it applies to vis
   \caption{\textbf{Left:} Gain of a $8 \times 8$ mm$^2$ APDs as a function of bias voltage at different temperatures. The measurement was performed using a blue LED. \textbf{Right:} By shifting the bias for each curve according to the law described in the text, a scaling law is found.}
   \label{fig:gainfig}
 \end{figure}
-
 
 \section{Laboratory Characterisation of Irradiated $2 \times 2$~mm$^2$ APDs}
 \label{sec:irrad2x2}
