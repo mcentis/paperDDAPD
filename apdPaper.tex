@@ -7,6 +7,7 @@
 \usepackage{authblk} % authors and affiliations
 \usepackage{hyperref}
 \usepackage{subfig}
+\usepackage{xcolor}
 
 \graphicspath{{./figures/}}
 
@@ -118,9 +119,10 @@ Studies of these sensors as Minimum Ionising Particle (MIP) timing detectors, us
 The timing performance as well as the radiation hardness of these devices are addressed.
 Section\,\ref{sec:ddApds} provides a general description of the deep diffused APDs.
 In section\,\ref{sec:samples} a detailed description of the devices used in this study is given.
-Section\,\ref{sec:irrad2x2} reports the characterisation of neutron-irradiated APDs with an active area of $2 \times 2$mm$^2$.
+Section\,\ref{sec:gain8x8led} contains the measurement of the gain for blue light of APDs with an active area of $8 \times 8$ mm$^2$. Both the bias and temperature depencence of the gain are explored.
+Section\,\ref{sec:irrad2x2} reports the characterisation of neutron-irradiated APDs with an active area of $2 \times 2$ mm$^2$.
 Sections\,\ref{sec:unif8x8laser} and\,\ref{sec:timing8x8laser} respectively summarise uniformity and timing measurements of APDs with an active area of $8 \times 8$mm$^2$ with DC-coupled and AC coupled readout.
-Section\,\ref{sec:tb8x8} describes the methods and results obtained though beam tests of APDs with an active area of $8 \times 8$mm$^2$ with AC-coupled readout.
+Section\,\ref{sec:tb8x8} describes the methods and results obtained though beam tests of APDs with an active area of $8 \times 8$ mm$^2$ with AC-coupled readout.
 Finally, section\,\ref{sec:summary} summarises the results obtained in this study.
 
 
@@ -244,23 +246,30 @@ In this paper detectors with both the DC-coupled mesh readout are characterised,
 %The reason that we have chosen to use a semi-transparent mesh electrode for the capacitive readout is to leave open the possibility of laser testing, which complements the charged particle response measurements.
 
 \section{Gain Measurement of $8 \times 8$ mm$^2$ APDs using a Blue LED}
+\label{sec:gain8x8led}
 %The gain was measured using a red (430nm?) laser pulse impinging on the top surface (Fig.1, left). Photoelectrons released in the upper low field region then drift toward the junction
 %and undergo multiplication by impact ionization (internal gain). The magnitude of this gain is set by decreasing the E-field to an asymptotically low value where multiplication stops (G=1).
 %A summary of such measurements is shown in (Figure: Gain) for a range of operating temperatures. As can be seen from this figure, the Gain for a given detector bias decreases with increasing temperature.
 %In fact, the data plotted in (Figure:Gain) all roughly coincide with a voltage scaling that corresponds to roughly to $\delta$V$\sim-2.45$V per deg. C.
 
-RMD 8x8mm 2 avalanche diode Gain vs. bias voltage response for 20 nsec(wide ?) 425nm led pulses.
-Unity gain refers to the amplitude obtained at the ~500V bias where amplitude is roughly V independent. 
-An attempt was made to parametrize regular trend in V required for a given gain vs. T by an ad hoc re-scaling of V’ = V-2.45*T( 0 C).
-This parametrization of the pattern up to Gain~1000 may prove useful for discriminating among impact ionization models that appear in the literature and as options in ,eg SILVACO TM for modeling such devices.
+The gain of $8 \times 8$ mm$^2$ APDs was measured using a pulsed LED.
+The LED had a wavelength of 425 nm and the pulses had a duration of 20 ns.
+\textcolor{red}{Readout ?}
+Unity gain refers to the amplitude obtained at $\approx$500 V bias, where the amplitude shows a weack dependence on the bias voltage $V$. 
+The measurements were performed at different temperatures, and the results are reported in figure\,\ref{fig:gainVsV}.
+An attempt was made to parametrize regular trend in $V$ required for a given gain as a function of temperature $T$.
+A temperature dependent shift $V' = V -2.45 \cdot T( 0 C)$ describes the change in voltage necessary to obtain a given value of gain when the APD temperature changes.
+\textcolor{red}{What does the (0C) mean in this case? Does the shift refer to the 0C curve?}
+This parametrization of the pattern up to a gain of $\approx$1000 may prove useful for discriminating among impact ionization models that appear in the literature and as options in TCAD\footnote{Technology Computer Aided Design.} software for modeling such devices.
 It should be noted that this particular definition of gain, as it applies to visible light photodetection in an APD, will likely differ from the response to minimum ionizing particles (or the IR laser model used) since, in the former case all photoelectrons traverse the region where impact ionization occurs.
+\textcolor{red}{Another difference could be the focusing? Was the light focussed? Which was the intensity?}
 
 \begin{figure}
   \centering
   \subfloat{\includegraphics[width = 0.55 \textwidth]{gainVsV}}
   \hfill
   \subfloat{\includegraphics[width = 0.45 \textwidth]{gainVsVscaled}}
-  \caption{\textbf{Left:} \textbf{Right:} Gain Measurements of 8x8 mm RMD APDs measured w 430 nm laser pulses.}
+  \caption{\textbf{Left:} Gain measurement of $8 \times 8$ mm$^2$ APDs at different temperatures using a blue LED. \textbf{Right:} By shifting the bias for each curve according to the law described in the text, a scaling law is found.}
   \label{fig:gainfig}
 \end{figure}
 
@@ -589,42 +598,45 @@ The metallised $8 \times 8$~mm$^2$ APDs often did not allow for a stable operati
 The source of the instability is under investigation.
 This instability influenced the choice of values of bias voltage used in this section.
 
-\section{Beam Tests of $8 \times 8$~mm$^2$ APDs with Mesh Readout}
+\section{Beam Tests of $8 \times 8$~mm$^2$ APDs with AC-coupled Readout}
 \label{sec:tb8x8}
 
-Several mesh readout $8 \times 8$~mm$^2$ devices have been characterized in terms of their uniformity of response in a 150 GeV muon beam in the H4 beam line at the CERN SPS.
-For the measurements described below we used a fast transimpedence amplifier with roughly 10 ohm effective input impedance(ref. suggestion from Mitch) and bandwidth of 1 GHz. The measurements were carried out within the infrastructure of PICOSEC\,\cite{bortfeld2018}.
-In particular, the PICOSEC setup provided tracking precision of 40 microns and a t0 reference based on a Hamamatsu MCP PMT which detected charged particles by the Cerenkov light produced in the quartz entrance window providing a ref time jitter of $<10$ picoseconds\,\cite{sohl2018}.
+Several mesh readout $8 \times 8$~mm$^2$ APDs were characterized in terms of their uniformity of response using a 150 GeV muon beam in the H4 beam line at the CERN SPS\textcolor{red}{ref?}.
+For the measurements described below a fast transimpedence amplifier with roughly 10 ohm effective input impedance was used(ref. suggestion from Mitch).
+The bandwidth of the amplifier was 1 GHz.
+The measurements were carried out within the infrastructure of PICOSEC\,\cite{bortfeld2018}.
+In particular, the PICOSEC setup provided particle tracking with a resolution of 40 $\mu$m and a time reference based on a Hamamatsu MCP PMT\footnote{Micro Channel Plate Photomultiplier.} which detected charged particles by the Cerenkov light produced in the quartz entrance window providing a reference time jitter of $<10$ picoseconds\,\cite{sohl2018}.
+\textcolor{red}{reference frame of the beam test? APD temperature?  Selection cuts?}
 
-Using the above setup and a 2.5 GHz 20 GSa/s digital oscilloscope to record the waveforms the timing measurements of HFS were derived using a 20\% constant fraction algorithm (to define the signal time of arrival).
+Using the above setup and a 2.5 GHz 20 GSa/s digital oscilloscope to record the waveforms the timing measurements of the mesh readout APDs were derived using a 20\% constant fraction algorithm (to define the signal time of arrival).
 To ensure the consistency of this timing measurement the dependence of waveform characteristics (particularly the rise time) on impact position of muons was studied using the H4 beam data.
-For this particular study a sample of $\approx$1000 events were recorded with HFS operated at a bias of 1750V resulting in a most probable amplitude (MIP peak) of 65 mV at the scope input.
+For this particular study a sample of $\approx$1000 events were recorded with the sensor operated at a bias of 1750 V resulting in a most probable amplitude (MIP peak) of 65 mV at the oscilloscope input.
 The typical pulse rise time (measured at 20-80\% levels) was 630 picoseconds with an RMS spread of $\approx$160 picoseconds.
-As seen from the plots below this aspect of the signal is essentially independent of the point of impact.
-
-In the following we present the signal amplitude dependence on impact position.
-In general the amplitude (defined as the median of the Landau distribution) shows small variation of the detector active area and a precipitous (within $\approx$200micron fall off at the detector edges ($\approx$4.5mm from the center).
-(the below figure is just a placeholder and I am working on a usable version).
-
-
+Figure\,\ref{fig:risetime8x8impact} shows the average risetime as a function of the impact position of the particles for both the $x$ and $y$ directions.
+The rise time is essentially independent of the point of impact.
 \begin{figure}
   \centering
   \includegraphics[width = 0.6 \textwidth]{risetime8x8vsImpact}
-  \caption{}
+  \caption{Mean 20-to-80\% rise time as a function of impact position for a mesh readout APD. The measurement was performed using 150 GeV muons. The APD was operated at 1750 V, at a temperature of \textcolor{red}{...}$^\circ$C.}
   \label{fig:risetime8x8impact}
 \end{figure}
 
+Figure\,\ref{fig:toa8x8impact} shows the time of arrival of the particles as measured by the mesh readout APD as a function of impact position.
+The MCP PMT is used to define the origin of the time axis.
 \begin{figure}
   \centering
   \includegraphics[width = 0.6 \textwidth]{toa8x8VsImpact}
-  \caption{}
+  \caption{Average time of arrival as a function of impact position for a mesh readout APD. The measurement was performed using 150 GeV muons. The MCP PMT defines the origin of the time axis. The APD was operated at 1750 V, at a temperature of \textcolor{red}{...}$^\circ$C.}
   \label{fig:toa8x8impact}
 \end{figure}
 
+The dependence of the signal amplitude on the muons' impact position is shown in figure\,\ref{fig:ampli8x8impact}.
+The figure shows the median amplitude obtained at different positions on the detector.
+The amplitude shows small variations within the detector active area and falls within $\approx$200 $\mu$m from the detector edges ($\approx$4.5mm from the center).
 \begin{figure}
   \centering
   \includegraphics[width = 0.6 \textwidth]{ampli8x8vsImpact}
-  \caption{}
+  \caption{Median amplitude as a function of impact position for a mesh readout APD. The measurement was performed using 150 GeV muons. The APD was operated at 1750 V, at a temperature of \textcolor{red}{...}$^\circ$C.}
   \label{fig:ampli8x8impact}
 \end{figure}
 
