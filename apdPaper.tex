@@ -55,22 +55,21 @@
 
 \begin{abstract}
 The high luminosity upgrade of the CERN Large Hadron Collider (HL-LHC) will result in a pile-up of around 200 proton-proton collisions per bunch crossing.
-In order to reduce the impact of pile-up on physics analyses the ATLAS and CMS experiments are planning to use the timing of physics objects within one event.
-The primary proton-proton collisions have an RMS spread of $\approx$170~ps within one bunch crossing, and a time resolution of around 30 ps is require for pile-up mitigation.
+In order to reduce the impact of pile-up on physics analyses the ATLAS and CMS experiments are planning to use the timing of the reconstructed objects within one event.
+The primary proton-proton collisions have an RMS spread of $\approx$170~ps within one bunch crossing, and a time resolution of around 30 ps is required for pile-up mitigation.
 This performance requires dedicated detectors for the timing of minimum ionising particles.
-The timing detectors will be subjected, for the goal integrated luminosity of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap regions, respectively.
+The timing detectors will be subjected, for the goal integrated luminosity of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions, respectively.
 
 %% For their operation at the CERN High Luminosity Large Hadron Collider (HL-LHC), the ATLAS and CMS experiments are planning to implement dedicated systems to measure the time of arrival of minimum ionising particles with an accuracy of about 30 ps.
 %% The timing detectors will be subjected to radiation levels corresponding up to a 1-MeV neutrons fluence ($\Phi_{eq}$) of $10^{15}$\,cm$^{-2}$ for the goal integrated luminosity of HL-LHC of 3000 fb$^{-1}$.
   
-In this paper, deep diffused Avalanche Photo Diodes (APDs) produced by Radiation Monitoring Devices are examined as candidate timing detectors for HL-LHC applications.
-To improve the detector's timing performance, the APDs are used to directly detect the traversing particles, without a radiator medium where light is produced.
-These APDs are operated at 1.8\,kV, resulting in a gain of up to 500.
-The detectors have an active area of up to $8 \times 8$ mm$^2$, close to the channel size of the CMS barrel timing layer.
-%The performance of the detectors is evaluated using both laboratory characterisations and beam tests.
+In this paper, deep diffused Avalanche Photo Diodes (APDs) are examined as candidate timing detectors for HL-LHC applications.
+%% To improve the detector's timing performance, the APDs are used to directly detect the traversing particles, without a radiator medium where light is produced.
+%% These APDs are operated at 1.8\,kV, resulting in a gain of up to 500.
+%% The detectors have an active area of up to $8 \times 8$ mm$^2$, close to the channel size of the CMS barrel timing layer.
 
-Devices with an active area of $8 \times 8$\,mm$^2$ were characterised using a pulsed infrared laser and, in some cases, an high energy muon beam.
-The timing performance as well as the uniformity of response are examined in this paper.
+Devices with an active area of $8 \times 8$\,mm$^2$ are characterised using a pulsed infrared laser and, in some cases, an high energy muon beam.
+The timing performance as well as the uniformity of response are examinedve.
 
 The effects of radiation damage on current, signal amplitude, noise, and timing of the APDs are evaluated using detectors with an active area of $2 \times 2$\,mm$^2$.
 These detectors were irradiated with neutrons up to $\Phi_{eq} = 10^{15}$\,cm$^{-2}$.
@@ -90,17 +89,18 @@ Their timing performance was characterised using a pulsed infrared laser.
 \section{Introduction}
 
 The high luminosity upgrade of the CERN Large Hadron Collider (HL-LHC) foreseen to start in 2026 will provide an instantaneous luminosity of up to $5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$ with a bunch spacing of 25\,ns, and an average pile-up of up to 200 collisions per bunch crossing\,\cite{hlLhcTecDesRep}.
-This value of pile-up presents a challenge for the experiments, as currently ATLAS and CMS have reached a typical pile-up of $\approx 30$ \textcolor{red}{ref?}.
+This value of pile-up presents a challenge for the experiments, as currently ATLAS and CMS have reached a typical number of concurring interaction within the same bunch crossing (pile-up) of approximately 30 \textcolor{red}{ref?}.
 At the present, the effects of pile-up on physics analyses are mitigated by resolving the primary vetexes within one bunch crossing along the beam axis.
-The physics objects are then associated to the primary vertexes.
+The physics objects are then associated to the to the corresponding vertices by using the tracking information.
 This strategy was used also at Tevatron, where the pile-up was $\appox 6$ \textcolor{red}{ref?}.
-The pile-up at HL-LHC will pose a challenge to this method, as a significant fraction of the primary vertexes will have a distance smaller than the resolution of the vertex detectors, making an association to the physics objects impossible.
+The pile-up at HL-LHC will pose a challenge to this method, as a significant fraction of the primary vertices will have a distance smaller than the resolution of the vertex detectors, making an association to the reconstructed physics objects impossible.
 
-A different method to reconstruct the primary vertexes relies on the measurement of the time of creation of the particles traversing the detectors.
-A sufficently accurate time measurement effectively reduces the vertex density, improving the vertex reconstruction capability of the experiments.
-Since the RMS spread of the primary vertexes at HL-LHC is foreseen to be $\approx$ 170~ps within one bunch crossing, a minimum ionising particle (MIP) time resolution of $\approx 30$~ps is necessary for a correct association of the particles to their primary vertexes \textcolor{red}{ref?}.
+A different method to associate the reconstructed objects to separate vertices relies on the measurement of the time of arrival of the particles at the detectors.
+A sufficently accurate time measurement effectively reduces the vertex density, improving the event reconstruction capability of the experiments.
+Since the RMS spread of the primary vertices at HL-LHC is foreseen to be $\approx$ 170~ps within one bunch crossing, a minimum ionising particle (MIP) time resolution of $\approx 30$~ps is necessary to improve the association of the particles to their correct vertex \textcolor{red}{ref?}.
 
 To reach this performance, dedicated detector systems will be needed and both ATLAS and CMS are planning such upgrades\,\cite{cmsMIPtiming,atlasMIPtiming}.
+The timing detectors will be subjected, for the goal integrated luminosity of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions, respectively.
 
 %% As has long been recognized, the trend toward higher luminosities in hadron colliders has stressed the ability of detectors to resolve multiple interactions (so-called in time pileup).
 %% The luminosity for a given stored beam energy is maximized by concentrating the particle beams in as few bunches as possible.
@@ -119,7 +119,7 @@ To reach this performance, dedicated detector systems will be needed and both AT
 
 %The high luminosity upgrade of the CERN Large Hadron Collider (HL-LHC) foreseen to start in 2026 will provide an instantaneous luminosity of up to $5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$ with a bunch spacing of 25\,ns, and an average pile-up of up to 200 collisions per bunch crossing\,\cite{hlLhcTecDesRep}.
 %To reduce the effects of pile-up on the physics analyses, both the ATLAS and CMS experiments are planning to implement dedicated systems to measure the time of arrival of minimum ionising particles (MIPs) with an accuracy of about 30 ps.
-%By providing the time of arrival information of MIPs, these systems allow for the correct association of particles to their primary vertexes in the case where the latter have a proximity in space that renders their separation impossible.
+%By providing the time of arrival information of MIPs, these systems allow for the correct association of particles to their primary vertices in the case where the latter have a proximity in space that renders their separation impossible.
 %An improved time of arrival resolution would also effectively reduce the vertex density, and improve the vertex reconstruction capability of the experiments.
 %These timing detectors will be subjected to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of up to $10^{15}$\,cm$^{-2}$ for the goal integrated luminosity of HL-LHC of 3000\,fb$^{-1}$.
 
@@ -135,15 +135,16 @@ In this context, avalanche silicon diode structures with a capacitively coupled 
 The characteristics of these detectors make them suitable for applications where a pixel size of order of 1 cm$^{2}$ is appropriate.
 \todo[inline]{Why only 1cm2, should we not state that in their present size they can be used for 1cm2 while the technology itself could be developed towards other sizes....?}
 This paper summarizes the characterization of deep diffused Avalanche Photo Diodes (APDs) produced by Radiation Monitoring Devices\,\cite{rmdAddress} used as timing detectors for charged particles.
+To improve the detector's timing performance, the APDs are used to directly detect the traversing particles, without a radiator medium where light is produced.
 Studies of these sensors as Minimum Ionising Particle (MIP) timing detectors, using an AC-coupled readout, were performed previously and showed promising results\,\cite{white2014}.
 The timing performance as well as the radiation hardness of these devices are addressed.
 Section\,\ref{sec:ddApds} provides a general description of the deep diffused APDs.
-In section\,\ref{sec:samples} a detailed description of the devices used in this study is given.
-Section\,\ref{sec:gain8x8led} contains the measurement of the gain for blue light of APDs with an active area of $8 \times 8$ mm$^2$. Both the bias and temperature depencence of the gain are explored.
+In Section\,\ref{sec:samples} a detailed description of the devices used in this study is given.
+Section\,\ref{sec:gain8x8led} contains the measurement of the gain for blue light of APDs with an active area of $8 \times 8$ mm$^2$. Both the bias and temperature dependence of the gain are explored.
 Section\,\ref{sec:irrad2x2} reports the characterisation of neutron-irradiated APDs with an active area of $2 \times 2$~mm$^2$.
-Sections\,\ref{sec:unif8x8laser} and\,\ref{sec:timing8x8laser} respectively summarise uniformity and timing measurements of APDs with an active area of $8 \times 8$mm$^2$ with DC-coupled and AC coupled readout.
+Sections\,\ref{sec:unif8x8laser} and\,\ref{sec:timing8x8laser}, respectively, summarise uniformity and timing measurements of APDs with an active area of $8 \times 8$mm$^2$ with DC-coupled and AC-coupled readout.
 Section\,\ref{sec:tb8x8} describes the methods and results obtained though beam tests of APDs with an active area of $8 \times 8$ mm$^2$ with AC-coupled readout.
-Finally, section\,\ref{sec:summary} summarises the results obtained in this study.
+Finally, Section\,\ref{sec:summary} summarises the results obtained in this study.
 
 
 \section{Deep Diffused APDs}
