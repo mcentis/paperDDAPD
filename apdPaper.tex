@@ -161,7 +161,7 @@ The concept of full depletion voltage, usually applied to detectors produced thr
 The occurrence of breakdown and noise from the edges of the detector die is mitigated by reducing the electric field in these regions.
 This can be achieved by beveling the detector's edges\,\cite{mcclish2004}.
 The current APD design reduces the electric field at the edges of the depletion region by distributing the doping in the sensor such that the depletion region is ``bent'' and terminated on one of the sensor's surfaces\,\cite{mcclish2004}.
-A mesa structure reduces the electric field at the sensor's surface.
+A mesa structure, where the n-type silicon forms a plateau that is joined to the p-type silicon, reduces the electric field at the sensor's surface, see figure\,\ref{fig:apdDia}.
 
 Deep diffused APDs get their name from the process used to produce a pn-junction several tens of microns from the detector surface.
 The APDs used in this work are produced on silicon using the method explained in\,\cite{mcclish2004,apdPatent}.
@@ -299,7 +299,6 @@ is different from the gain obtained from the response to minimum ionizing partic
   \hfill
   \subfloat{\includegraphics[width = 0.45 \textwidth]{gainVsVscaled}}
   \caption{\textbf{Left:} Gain of a $8 \times 8$ mm$^2$ APDs as a function of bias voltage at different temperatures. The measurement was performed using a blue LED. \textbf{Right:} By shifting the bias for each curve according to the law described in the text, a scaling law is found.}
-  %\label{fig:gainfig}
   \label{fig:gainVsV}
 \end{figure}
 
@@ -310,8 +309,8 @@ is different from the gain obtained from the response to minimum ionizing partic
 
 Two experimental setups were used to characterise the APDs.
 
-The current-voltage characteristic of the detectors was measured using a voltage source and a picoammeter connected in series to the sensor under test.
-The sensor was placed inside a climate chamber flushed with dry air where the temperature could be controlled.
+The current-voltage (IV) characteristic of the detectors was measured using a voltage source and a picoammeter connected in series to the sensor under test.
+The sensor was placed inside a climate chamber flushed with dry air where the temperature was set to $-20^circ$C and it could be controlled with an accuracy of $0.2^\circ$C.
 The temperature sensor on the PCB was used to ensure that the APD reached thermal equilibrium with the air in the climate chamber before starting the measurements.
 
 The response of the APDs to a pulsed infrared laser was measured in a different setup and used to determine the variation of the sensor's signal and time resolution as a function of bias voltage and irradiation fluence.
@@ -363,9 +362,9 @@ For the measurements of intensity as a function of bias voltage and the timing m
 \end{figure}
 
 \paragraph{Current-voltage characteristic}
-The current-voltage (IV) characteristic of the APDs is shown, for different fluences, in figure\,\ref{fig:iv2x2}.
+The current-voltage (IV) characteristics of the APDs are shown, for different fluences, in figure\,\ref{fig:iv2x2}.
 Before irradiation, below 1600\,V, the current assumes a value of less than a few nA.
-In this region the main contribution to the current is thought to be surface current.
+In this region the main contribution to the current is thought to be due to surface current.
 Between 1600 and 1800\,V, the current increases by 4 orders of magnitude.
 This is the region where the multiplication dominates the IV characteristic of the non-irradiated sensors.
 The surface current is not affected by multiplication, therefore the multiplication of bulk current in the non-irradiated sensors can not be seen in the IV curve until the gain is sufficiently high.
@@ -387,7 +386,7 @@ This also applies to the amplitude measurements presented below.
   \subfloat[$\Phi_{eq} = 6 \cdot 10^{13}$\,cm$^{-2}$, 1673\,V]{\includegraphics[width = 0.45 \textwidth]{APD_2B_5_IR_XY_peak_scan_m20C_6E13}}\\
   \subfloat[$\Phi_{eq} = 3 \cdot 10^{14}$\,cm$^{-2}$, 1677\,V]{\includegraphics[width = 0.45 \textwidth]{APD_2B_4_IR_XY_peak_scan_m20C_3E14}}\hfill
   \subfloat[$\Phi_{eq} = 10^{15}$\,cm$^{-2}$, 1644\,V]{\includegraphics[width = 0.45 \textwidth]{APD_2B_9_IR_XY_peak_scan_m20C_1E15}}
-  \caption{Signal amplitude as a function of the position where the laser was focused on the sensors measured at $-20^\circ$C. The laser intensity corresponds to 15\,MIPs. An amplification of 10\,dB was used.}
+  \caption{Signal amplitude as a function of the $x-y$ position where the laser was focused on the sensors measured at $-20^\circ$C. The laser intensity corresponds to 15\,MIPs. An amplification of 10\,dB was used.}
   \label{fig:xyScanIR_2x2}
 \end{figure}
 
@@ -476,7 +475,7 @@ This is attributed to the lower value of gain of this sensor compared to the oth
 \begin{figure}
   \centering
   \includegraphics[width = 0.6 \textwidth]{snr2x2APDs}
-  \caption{Signal to noise ratio of the $2 \times 2$~mm$^2$ APDs as a function of bias voltage and fluence measured at $-20^\circ$C. The laser intensity corresponds to 0.8\,MIPs. An amplification of 40\,dB was used.}
+  \caption{Signal to noise ratio (SNR) of the $2 \times 2$~mm$^2$ APDs as a function of bias voltage and fluence measured at $-20^\circ$C. The laser intensity corresponds to 0.8\,MIPs. An amplification of 40\,dB was used.}
   \label{fig:snr2x2}
 \end{figure}
 
@@ -534,7 +533,7 @@ The dashed line represents a 1/SNR behaviour.
 \end{figure}
 
 The jitter of the sensors is not degraded by the neutron-induced radiation damage corresponding to a fluence of at least $\Phi_{eq} = 6 \cdot 10^{13}$\,cm$^{-2}$.
-This result is expected to hold for timing measurements of charged particles.
+These results are expected to hold for timing measurements of charged particles.
 The overall resolution is however expected to worsen due to the fluctuations of the amount of charge deposited per unit length along the particle path.
 These fluctuations, also known as {\em Landau noise}\,\cite{cartiglia2017}, can influence the leading edge of the sensor's signal and therefore worsen the time resolution.
 
@@ -542,16 +541,16 @@ These fluctuations, also known as {\em Landau noise}\,\cite{cartiglia2017}, can 
 \label{sec:unif8x8laser}
 
 The uniformity of response of the $8 \times 8$~mm$^2$ APDs was studied using an infrared laser.
-The amplitude and integrated signal are shown in figure\,\ref{fig:8x8unif_noMetal} as a function of the position were the laser illuminated the detector.
+The amplitude and integrated signal are shown in figure\,\ref{fig:8x8unif_noMetal} as a function of the position where the laser illuminated the detector.
 The sensor was mounted with the n-side facing the PCB, and the laser shone on the p-side.
-The sensor was contacted using opaque conductive paint.
+The sensor was electrically connected using opaque conductive paint.
 The point of contact on the p-side can be seen at the coordinate (4.5, 6)\,mm.
 Since the absorption length of the light used in the measurements is greater than the sensor thickness, several features of the surface below the sensor can be seen in the figure.
 The square mesa structure and the conductive paint used to glue the detector to the PCB used for the measurements can be seen as areas of increased amplitude and signal integral due to their reflection of the light toward the sensor.
 The PCB has a hole below the detector centre, that results in decreased values of amplitude and signal integral.
 Since the signal amplitude is affected by both the deposited charge in the detector and the detector properties, the amplitude was normalised using the integrated signal in order to mitigate the former effect.
 The ratio between the amplitude and the integrated signal is shown in figure\,\ref{fig:8x8unif_noMetal}.
-The effects of the surface below the sensor are reduced and a dependency of the ratio between amplitude and charge on the distance between the laser spot and the point where the signal is collected from the sensor can be seen.
+The effects of the surface below the sensor are reduced and a dependency of the ratio between amplitude and charge on the distance between the laser spot and the point where the signal is collected from the sensor is shown.
 The amplitude of the signal decreases with increasing distance from the electrical contact.
 This effect is attributed to the non-negligible resistivity of the conductive layers applied to the detector.
 The dependency of the signal amplitude on the detector position can result in a worsened time resolution.
@@ -562,7 +561,7 @@ The dependency of the signal amplitude on the detector position can result in a 
   \subfloat[Integrated signal]{\includegraphics[width = 0.45 \textwidth]{chargeMap8x8fine}}\\
   \subfloat[Ratio]{\includegraphics[width = 0.45 \textwidth]{ratioPeakChargeMap8x8fine}}\hfill
   \subfloat[Ratio vs distance]{\includegraphics[width = 0.45 \textwidth]{ratioPeakChargeDistance}}\\
-  \caption{Signal amplitude {\bf (a)}, integral {\bf (b)}, and ratio between amplitude and integral {\bf (c)} of a $8 \times 8$~mm$^2$ APD as a function of position. {\bf (d)} Ratio between amplitude and integral as a function of distance from the electrical contact of the sensor. The sensor was biased at 1700\,V, at a temperature of $-20^\circ$C. The laser intensity corresponds to 15 MIPs. An amplification of 10\,dB was used.}
+  \caption{Signal amplitude {\bf (a)}, integral {\bf (b)}, and ratio between amplitude and integral {\bf (c)} of a $8 \times 8$~mm$^2$ APD as a function of the $x-y$ impact point of the laser beam on the sensor. {\bf (d)} Ratio between amplitude and integral as a function of distance from the electrical contact of the sensor. The sensor was biased at 1700\,V, at a temperature of $-20^\circ$C. The laser intensity corresponds to 15 MIPs. An amplification of 10\,dB was used.}
   \label{fig:8x8unif_noMetal}
 \end{figure}
 
@@ -583,7 +582,7 @@ A light intensity corresponding to 0.8\,MIPs and an amplification of 40\,dB were
 The light was shone in the centre of the detector.
 The signal amplitude and noise are shown in figure\,\ref{fig:ampli8x8metal} and\,\ref{fig:noise8x8metal}, respectively.
 The signal amplitude is smaller than the one of the $2 \times 2$~mm$^2$ devices shown in section\,\ref{sec:irrad2x2}.
-This can be a consequence of a lower gain of the device under test or the bigger capacitance of the device.
+This can be a consequence of a lower gain of the device under test or due to a bigger capacitance of the device.
 The noise is also smaller than the one of the $2 \times 2$~mm$^2$ devices.
 Both signal amplitude and noise increase as a function of bias voltage.
 The signal to noise ratio is lower than the one of the non-irradiated $2 \times 2$~mm$^2$ APD presented in section\,\ref{sec:irrad2x2}, ranging from 18 to 62.
@@ -631,19 +630,18 @@ This instability influenced the choice of values of bias voltage used in this se
 \label{sec:tb8x8}
 
 Several mesh readout $8 \times 8$~mm$^2$ APDs were characterized in terms of their uniformity of response using a 150 GeV muon beam in the H4 beam line at the CERN SPS \textcolor{red}{ref?}.
-For the measurements described below a fast transimpedence amplifier with roughly 10 ohm effective input impedance was used
-\textcolor{red}{(ref. suggestion from Mitch)}.
+For the measurements described below a fast transimpedence amplifier with roughly 10 $\Omega$ effective input impedance was used\textcolor{red}{(ref. suggestion from Mitch)}.
 The bandwidth of the amplifier was 1 GHz.
 The measurements were carried out within the infrastructure of PICOSEC\,\cite{bortfeld2018}.
 In particular, the PICOSEC setup provided particle tracking with a resolution of 40 $\mu$m and a time reference based on a Hamamatsu MCP PMT\footnote{Micro Channel Plate Photomultiplier.} which detected charged particles by the Cerenkov light produced in the quartz entrance window providing a reference time jitter of $<10$ picoseconds\,\cite{sohl2018}.
 \textcolor{red}{reference frame of the beam test? APD temperature?  Selection cuts?}
 
-Using the above setup and a 2.5 GHz 20 GSa/s digital oscilloscope to record the waveforms the timing measurements of the mesh readout APDs were derived using a 20\% constant fraction algorithm to define the signal time of arrival.
+Using the above setup and a 2.5 GHz 20 GSa/s digital oscilloscope to record the waveforms the timing measurements of the mesh readout APDs were derived using a 20\% constant fraction algorithm to define the signal arrival time.
 To ensure the consistency of this timing measurement the dependence of the waveform characteristics and in particular the rise time dependence on the impact position of the muons was studied using the H4 beam data.
 For this particular study a sample of $\approx$1000 events were recorded with the sensor operated at a bias of 1750~V resulting in a most probable amplitude (MIP peak) of 65~mV at the oscilloscope input.
 The typical pulse rise time (measured at 20-80\% levels) was 630~ps with an RMS spread of $\approx$160~ps.
-Figure\,\ref{fig:risetime8x8impact} shows the average risetime as a function of the impact position of the particles for both the $x$ and $y$ directions.
-The rise time is essentially independent of the point of impact.
+Figure\,\ref{fig:risetime8x8impact} shows the average risetime as a function of the impact position of the particles along the $x$ and $y$ directions.
+The rise time is independent of the charged particle impact point.
 \begin{figure}
   \centering
   \includegraphics[width = 0.6 \textwidth]{risetime8x8vsImpact}
@@ -651,7 +649,7 @@ The rise time is essentially independent of the point of impact.
   \label{fig:risetime8x8impact}
 \end{figure}
 
-Figure\,\ref{fig:toa8x8impact} shows the time of arrival of the particles as measured by the mesh readout APD as a function of impact position.
+Figure\,\ref{fig:toa8x8impact} shows the time of arrival of the particles as measured by the mesh readout APD as a function of the impact position.
 The MCP PMT is used to define the origin of the time axis.
 \begin{figure}
   \centering
