@@ -8,7 +8,7 @@
 \usepackage{hyperref}
 \usepackage{subfig}
 \usepackage{xcolor}
-
+\usepackage[colorinlistoftodos]{todonotes}
 \graphicspath{{./figures/}}
 
 %Localwords: ps CMS ATLAS kV CFD photodiode metallisation HL LHC hadron CERN fluence collider APD APDs fluence fluences PCBs Kapton MIP MIPs metallised SNR
@@ -32,10 +32,10 @@
 
 \author[1]{M.~Centis~Vignali}
 \author[1,2]{M.~Gallinaro}
-\author[3]{B.~Harrop}
-\author[3]{C.~Lu}
+\author[3]{\textcolor{red}{B.~Harrop}}
+\author[3]{\textcolor{red}{C.~Lu}}
 \author[4]{M.~McClish}
-\author[3]{K.~T.~McDonald}
+%\author[3]{K.~T.~McDonald}
 \author[1]{M.~Moll}
 \author[5]{F.~M.~Newcomer}
 \author[1,6]{S.~Otero~Ugobono}
@@ -56,7 +56,7 @@
 \begin{abstract}
 The high luminosity upgrade of the CERN Large Hadron Collider (HL-LHC) will result in a pile-up of around 200 proton-proton collisions per bunch crossing.
 In order to reduce the impact of pile-up on physics analyses the ATLAS and CMS experiments are planning to use the timing of physics objects within one event.
-The primary proton-proton collisions have an RMS spread of $\approx$170 ps within one bunch crossing, and a time resolution of around 30 ps is require for pile-up mitigation.
+The primary proton-proton collisions have an RMS spread of $\approx$170~ps within one bunch crossing, and a time resolution of around 30 ps is require for pile-up mitigation.
 This performance requires dedicated detectors for the timing of minimum ionising particles.
 The timing detectors will be subjected, for the goal integrated luminosity of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap regions, respectively.
 
@@ -98,7 +98,7 @@ The pile-up at HL-LHC will pose a challenge to this method, as a significant fra
 
 A different method to reconstruct the primary vertexes relies on the measurement of the time of creation of the particles traversing the detectors.
 A sufficently accurate time measurement effectively reduces the vertex density, improving the vertex reconstruction capability of the experiments.
-Since the RMS spread of the primary vertexes at HL-LHC is foreseen to be $\approx$ 170 ps within one bunch crossing, a minimum ionising particle (MIP) time resolution of $\approx 30$ ps is necessary for a correct association of the particles to their primary vertexes\textcolor{red}{ref?}.
+Since the RMS spread of the primary vertexes at HL-LHC is foreseen to be $\approx$ 170~ps within one bunch crossing, a minimum ionising particle (MIP) time resolution of $\approx 30$~ps is necessary for a correct association of the particles to their primary vertexes \textcolor{red}{ref?}.
 
 To reach this performance, dedicated detector systems will be needed and both ATLAS and CMS are planning such upgrades\,\cite{cmsMIPtiming,atlasMIPtiming}.
 
@@ -124,22 +124,23 @@ To reach this performance, dedicated detector systems will be needed and both AT
 %These timing detectors will be subjected to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of up to $10^{15}$\,cm$^{-2}$ for the goal integrated luminosity of HL-LHC of 3000\,fb$^{-1}$.
 
 By exploiting the design margins of HL-LHC, it will be possible to achieve an ultimate luminosity of up to $7.5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$ and an ultimate integrated luminosity of 4000\,fb$^{-1}$\,\cite{hlLhcTecDesRep}.
+\todo[inline]{Need to streamline with abstract 4000fb vs. 3000fb}
 In this scenario the pile-up and fluence to which the detectors will be exposed will increase proportionally to the instantaneous and integrated luminosity, respectively.
 
 %Different detector technologies are studied for the realization of the MIP timing systems.
 %Silicon photomultipliers (SiPMs) coupled to scintillating crystals and low gain avalanche devices (LGADs) constitute currently the baseline technology choosen by ATLAS and CMS\,\cite{cmsMIPtiming,atlasMIPtiming}.
 
-All the proposed technologies for ATLAS and CMS timing layers involve silicon with snternal gain: Silicon Photomultipliers (SiPMs) or Low Gain Avalanche Diodes (LGADs)\,\cite{cmsMIPtiming,atlasMIPtiming}.
+All the proposed technologies for ATLAS and CMS timing layers involve silicon with internal gain: Silicon Photomultipliers (SiPMs) or Low Gain Avalanche Diodes (LGADs)\,\cite{cmsMIPtiming,atlasMIPtiming}.
 In this context, avalanche silicon diode structures with a capacitively coupled readout for charged particle timing were evaluated.
 The characteristics of these detectors make them suitable for applications where a pixel size of order of 1 cm$^{2}$ is appropriate.
-
+\todo[inline]{Why only 1cm2, should we not state that in their present size they can be used for 1cm2 while the technology itself could be developed towards other sizes....?}
 This paper summarizes the characterization of deep diffused Avalanche Photo Diodes (APDs) produced by Radiation Monitoring Devices\,\cite{rmdAddress} used as timing detectors for charged particles.
 Studies of these sensors as Minimum Ionising Particle (MIP) timing detectors, using an AC-coupled readout, were performed previously and showed promising results\,\cite{white2014}.
 The timing performance as well as the radiation hardness of these devices are addressed.
 Section\,\ref{sec:ddApds} provides a general description of the deep diffused APDs.
 In section\,\ref{sec:samples} a detailed description of the devices used in this study is given.
 Section\,\ref{sec:gain8x8led} contains the measurement of the gain for blue light of APDs with an active area of $8 \times 8$ mm$^2$. Both the bias and temperature depencence of the gain are explored.
-Section\,\ref{sec:irrad2x2} reports the characterisation of neutron-irradiated APDs with an active area of $2 \times 2$ mm$^2$.
+Section\,\ref{sec:irrad2x2} reports the characterisation of neutron-irradiated APDs with an active area of $2 \times 2$~mm$^2$.
 Sections\,\ref{sec:unif8x8laser} and\,\ref{sec:timing8x8laser} respectively summarise uniformity and timing measurements of APDs with an active area of $8 \times 8$mm$^2$ with DC-coupled and AC coupled readout.
 Section\,\ref{sec:tb8x8} describes the methods and results obtained though beam tests of APDs with an active area of $8 \times 8$ mm$^2$ with AC-coupled readout.
 Finally, section\,\ref{sec:summary} summarises the results obtained in this study.
@@ -274,14 +275,22 @@ In this paper detectors with both the DC-coupled mesh readout are characterised,
 The gain of $8 \times 8$ mm$^2$ APDs was measured using a pulsed LED.
 The LED had a wavelength of 425 nm and the pulses had a duration of 20 ns.
 \textcolor{red}{Readout ?}
-Unity gain refers to the amplitude obtained at $\approx$500 V bias, where the amplitude shows a weack dependence on the bias voltage $V$. 
+Unity gain refers to the amplitude obtained at $\approx$500 V bias, where the amplitude shows a weak dependence on the bias voltage~$V$.
 The measurements were performed at different temperatures, and the results are reported in figure\,\ref{fig:gainVsV}.
-An attempt was made to parametrize regular trend in $V$ required for a given gain as a function of temperature $T$.
-A temperature dependent shift $V' = V -2.45 \cdot T( 0 C)$ describes the change in voltage necessary to obtain a given value of gain when the APD temperature changes.
-\textcolor{red}{What does the (0C) mean in this case? Does the shift refer to the 0C curve?}
-This parametrization of the pattern up to a gain of $\approx$1000 may prove useful for discriminating among impact ionization models that appear in the literature and as options in TCAD\footnote{Technology Computer Aided Design.} software for modeling such devices.
-It should be noted that this particular definition of gain, as it applies to visible light photodetection in an APD, will likely differ from the response to minimum ionizing particles (or the IR laser model used) since, in the former case all photoelectrons traverse the region where impact ionization occurs.
+An attempt was made to parametrize
+% regular trend 
+the  voltage~$U$ required for a given gain as a function of temperature~$T$.
+A temperature dependent shift $U' = U -2.45~ V/^\circ C \cdot \Delta T( 0^\circ C)$ describes the change in voltage necessary to normalize a given value of gain to the gain obtained at $0^\circ C$ when the the temperature of the APD is changed. Here $\Delta T( 0^\circ C)$ gives the temperature difference to $0^\circ C$. 
+\textcolor{red}{What does the (0C) mean in this case? Does the shift refer to the 0C curve?
+mm: ...take a look if this is now formulated as meant??} The result of this scaling law is shown in figure \ref{fig:gainVsV}(Right).
+%This parametrization of the pattern up to a gain of 
+It describes the data up to a gain of
+$\approx$1000 and may prove useful for discriminating among impact ionization models that appear in the literature and as options in TCAD\footnote{Technology Computer Aided Design.} software for modeling such devices.
+It should be noted that this particular definition of gain, as it applies to visible light photodetection in an APD, 
+%will likely differ 
+is different from the gain obtained from the response to minimum ionizing particles (or the IR laser model used) since, in the former case all photoelectrons traverse the region where impact ionization occurs.
 \textcolor{red}{Another difference could be the focusing? Was the light focussed? Which was the intensity?}
+\textcolor{red}{We need to refer to our other gain definitions here.}
 
 \begin{figure}
   \centering
@@ -289,7 +298,8 @@ It should be noted that this particular definition of gain, as it applies to vis
   \hfill
   \subfloat{\includegraphics[width = 0.45 \textwidth]{gainVsVscaled}}
   \caption{\textbf{Left:} Gain of a $8 \times 8$ mm$^2$ APDs as a function of bias voltage at different temperatures. The measurement was performed using a blue LED. \textbf{Right:} By shifting the bias for each curve according to the law described in the text, a scaling law is found.}
-  \label{fig:gainfig}
+  %\label{fig:gainfig}
+  \label{fig:gainVsV}
 \end{figure}
 
 \section{Laboratory Characterisation of Irradiated $2 \times 2$~mm$^2$ APDs}
@@ -619,17 +629,18 @@ This instability influenced the choice of values of bias voltage used in this se
 \section{Beam Tests of $8 \times 8$~mm$^2$ APDs with AC-coupled Readout}
 \label{sec:tb8x8}
 
-Several mesh readout $8 \times 8$~mm$^2$ APDs were characterized in terms of their uniformity of response using a 150 GeV muon beam in the H4 beam line at the CERN SPS\textcolor{red}{ref?}.
-For the measurements described below a fast transimpedence amplifier with roughly 10 ohm effective input impedance was used(ref. suggestion from Mitch).
+Several mesh readout $8 \times 8$~mm$^2$ APDs were characterized in terms of their uniformity of response using a 150 GeV muon beam in the H4 beam line at the CERN SPS \textcolor{red}{ref?}.
+For the measurements described below a fast transimpedence amplifier with roughly 10 ohm effective input impedance was used
+\textcolor{red}{(ref. suggestion from Mitch)}.
 The bandwidth of the amplifier was 1 GHz.
 The measurements were carried out within the infrastructure of PICOSEC\,\cite{bortfeld2018}.
 In particular, the PICOSEC setup provided particle tracking with a resolution of 40 $\mu$m and a time reference based on a Hamamatsu MCP PMT\footnote{Micro Channel Plate Photomultiplier.} which detected charged particles by the Cerenkov light produced in the quartz entrance window providing a reference time jitter of $<10$ picoseconds\,\cite{sohl2018}.
 \textcolor{red}{reference frame of the beam test? APD temperature?  Selection cuts?}
 
-Using the above setup and a 2.5 GHz 20 GSa/s digital oscilloscope to record the waveforms the timing measurements of the mesh readout APDs were derived using a 20\% constant fraction algorithm (to define the signal time of arrival).
-To ensure the consistency of this timing measurement the dependence of waveform characteristics (particularly the rise time) on impact position of muons was studied using the H4 beam data.
-For this particular study a sample of $\approx$1000 events were recorded with the sensor operated at a bias of 1750 V resulting in a most probable amplitude (MIP peak) of 65 mV at the oscilloscope input.
-The typical pulse rise time (measured at 20-80\% levels) was 630 picoseconds with an RMS spread of $\approx$160 picoseconds.
+Using the above setup and a 2.5 GHz 20 GSa/s digital oscilloscope to record the waveforms the timing measurements of the mesh readout APDs were derived using a 20\% constant fraction algorithm to define the signal time of arrival.
+To ensure the consistency of this timing measurement the dependence of the waveform characteristics and in particular the rise time dependence on the impact position of the muons was studied using the H4 beam data.
+For this particular study a sample of $\approx$1000 events were recorded with the sensor operated at a bias of 1750~V resulting in a most probable amplitude (MIP peak) of 65~mV at the oscilloscope input.
+The typical pulse rise time (measured at 20-80\% levels) was 630~ps with an RMS spread of $\approx$160~ps.
 Figure\,\ref{fig:risetime8x8impact} shows the average risetime as a function of the impact position of the particles for both the $x$ and $y$ directions.
 The rise time is essentially independent of the point of impact.
 \begin{figure}
