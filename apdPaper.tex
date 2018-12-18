@@ -1,57 +1,48 @@
-\documentclass{article}
+\documentclass[3p,preprint,twocolumn]{elsarticle}
+%\documentclass{article}
 
 \usepackage[utf8]{inputenc} % special characters
 \usepackage[english]{babel}
 \usepackage{graphicx}
-\usepackage{a4wide}
-\usepackage{authblk} % authors and affiliations
+%\usepackage{a4wide}
+%\usepackage{authblk} % authors and affiliations
 \usepackage{hyperref}
 \usepackage{subfig}
 \usepackage{xcolor}
 \usepackage[colorinlistoftodos]{todonotes}
+
 \graphicspath{{./figures/}}
+
+\bibliographystyle{elsarticle-num}
 
 %Localwords: ps CMS ATLAS kV CFD photodiode metallisation HL LHC hadron CERN fluence collider APD APDs fluence fluences PCBs Kapton MIP MIPs metallised SNR eq muon photomultiplier 
 
-\title{Deep Diffused APDs for Charged Particle Timing Applications: Performance after Neutron Irradiation}
-
-%\author[1]{M.~Centis~Vignali}
-%\author[1,2]{M.~Gallinaro}
-%\author[3]{M.~McClish}
-%\author[1]{M.~Moll}
-%\author[4]{F.~M.~Newcomer}
-%\author[1,5]{S.~Otero~Ugobono}
-%\author[1,6]{S.~White}
-
-%\affil[1]{CERN, Geneva, Switzerland}
-%\affil[2]{LIP, Lisbon, Portugal}
-%\affil[3]{Radiation Monitoring Devices, Watertown, USA}
-%\affil[4]{University of Pennsylvania, Philadelphia, USA}
-%\affil[5]{Universidade de Santiago de Compostela, Santiago de Compostela, Spain}
-%\affil[6]{University of Virginia, Charlottesville, USA}
-
-\author[1]{M.~Centis~Vignali}
-\author[1,2]{M.~Gallinaro}
-\author[3]{\textcolor{red}{B.~Harrop}}
-\author[3]{\textcolor{red}{C.~Lu}}
-\author[4]{M.~McClish}
-%\author[3]{K.~T.~McDonald}
-\author[1]{M.~Moll}
-\author[5]{F.~M.~Newcomer}
-\author[1,6]{S.~Otero~Ugobono}
-\author[1,7]{S.~White}
-
-\affil[1]{CERN, Geneva, Switzerland}
-\affil[2]{LIP, Lisbon, Portugal}
-\affil[3]{Princeton University, Princeton, USA}
-\affil[4]{Radiation Monitoring Devices, Watertown, USA}
-\affil[5]{University of Pennsylvania, Philadelphia, USA}
-\affil[6]{Universidade de Santiago de Compostela, Santiago de Compostela, Spain}
-\affil[7]{University of Virginia, Charlottesville, USA}
-
 \begin{document}
 
-\maketitle
+\begin{frontmatter}
+
+\title{Deep Diffused APDs for Charged Particle Timing Applications: Performance after Neutron Irradiation}
+
+\author[cern]{M.~Centis~Vignali\corref{corrauthor}}
+\cortext[corrauthor]{Corresponding author}
+\ead{matteo.centis.vignali@cern.ch}
+
+\author[cern,lip]{M.~Gallinaro}
+\author[uprinc]{\textcolor{red}{B.~Harrop}}
+\author[uprinc]{\textcolor{red}{C.~Lu}}
+\author[rmd]{M.~McClish}
+\author[cern]{M.~Moll}
+\author[upenn]{F.~M.~Newcomer}
+\author[cern,usan]{S.~Otero~Ugobono}
+\author[cern,uvirg]{S.~White}
+
+\address[cern]{CERN, Geneva, Switzerland}
+\address[lip]{LIP, Lisbon, Portugal}
+\address[uprinc]{Princeton University, Princeton, USA}
+\address[rmd]{Radiation Monitoring Devices, Watertown, USA}
+\address[upenn]{University of Pennsylvania, Philadelphia, USA}
+\address[usan]{Universidade de Santiago de Compostela, Santiago de Compostela, Spain}
+\address[uvirg]{University of Virginia, Charlottesville, USA}
 
 \begin{abstract}
 The high luminosity upgrade of the CERN Large Hadron Collider (HL-LHC) will result in a pile-up of around 200 proton-proton collisions per bunch crossing.
@@ -59,14 +50,8 @@ In order to reduce the impact of pile-up on physics analyses the ATLAS and CMS e
 The primary proton-proton collisions have an RMS spread of $\approx$170~ps within one bunch crossing, and a time resolution of around 30 ps is required for pile-up mitigation.
 This performance requires dedicated detectors for the timing of minimum ionising particles.
 The timing detectors will be subjected, for the goal integrated luminosity of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions, respectively.
-
-%% For their operation at the CERN High Luminosity Large Hadron Collider (HL-LHC), the ATLAS and CMS experiments are planning to implement dedicated systems to measure the time of arrival of minimum ionising particles with an accuracy of about 30 ps.
-%% The timing detectors will be subjected to radiation levels corresponding up to a 1-MeV neutrons fluence ($\Phi_{eq}$) of $10^{15}$\,cm$^{-2}$ for the goal integrated luminosity of HL-LHC of 3000 fb$^{-1}$.
   
 In this paper, deep diffused Avalanche Photo Diodes (APDs) are examined as candidate timing detectors for HL-LHC applications.
-%% To improve the detector's timing performance, the APDs are used to directly detect the traversing particles, without a radiator medium where light is produced.
-%% These APDs are operated at 1.8\,kV, resulting in a gain of up to 500.
-%% The detectors have an active area of up to $8 \times 8$ mm$^2$, close to the channel size of the CMS barrel timing layer.
 
 Devices with an active area of $8 \times 8$\,mm$^2$ are characterised using a pulsed infrared laser and, in some cases, an high energy muon beam.
 The timing performance as well as the uniformity of response are examined.
@@ -76,15 +61,9 @@ These detectors were irradiated with neutrons up to $\Phi_{eq} = 10^{15}$\,cm$^{
 Their timing performance was characterised using a pulsed infrared laser.
 
 
-%% Recently, the focus on upgrades for the High Luminosity LHC (HL-LHC) era- where the interaction rate will increase to ~200 times the frame rate, greatly increasing the incidence of pileup induced background- has highlighted physics object timing as a tool to resolve multiple interactions within a frame (ie event). Since a frame captures a single proton bunch crossing with rms time spread of 170 picoseconds, a time resolution of $<50$ picoseconds or better is needed. What is particularly novel in the LHC application is rate and radiation hardness requirements.
-%% In particular, planned ATLAS and CMS charged particle timing layers in the barrel or endcap regions must survive radiation levels corresponding up to a 1-MeV neutron equivalent fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ during the lifetime of the HL-LHC, respectively. 
-%% In this paper we report on initial characterization of a Silicon based technology which would be suitable for large ($\sim1$cm$^{2}$) pixel size, as in the CMS barrel and high internal gain (ie yielding ionization signals of ~6x10$^{3}$ x [$G_{Internal}$=300] electrons/MIP). The silicon sensor uses Deep Depleted Avalanche Diodes produced by Radiation Monitoring Devices. 
-
 \end{abstract}
 
-\clearpage
-
-\tableofcontents
+\end{frontmatter}
 
 \section{Introduction}
 
@@ -102,32 +81,8 @@ Since the RMS spread of the primary vertices at HL-LHC is foreseen to be $\appro
 To reach this performance, dedicated detector systems will be needed and both ATLAS and CMS are planning such upgrades\,\cite{cmsMIPtiming,atlasMIPtiming}.
 The timing detectors will be subjected, for the goal integrated luminosity of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions, respectively.
 
-%% As has long been recognized, the trend toward higher luminosities in hadron colliders has stressed the ability of detectors to resolve multiple interactions (so-called in time pileup).
-%% The luminosity for a given stored beam energy is maximized by concentrating the particle beams in as few bunches as possible.
-%% In the past, the physics object resolving time of hadron collider experiments has exceeded the typical time envelope of a bunch with the result that as luminosities (ie interaction rates) increase, unresolved multiple interactions potentially result in backgrounds to real physics processes under study.
-
-%% In the 1990's at the Tevatron the pileup rate reached $\sim6$ interactions/event. Today ATLAS and CMS have reached typical pileup of $\sim30$.
-%% Looking ahead to the High Luminosity upgrades intended for 2026, the upgraded detectors will need to cope with a pileup level of $\sim200$, according to the HL-LHC designs specs for an ultimate luminosity of up to $7.5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$.
-%% The preliminary designs of next generation machines- the High Energy LHC or the Future Circular Collider- would push this pileup by another order of magnitude.
-
-%% An early tool for coping with pileup (ie CDF/Tevatron in the 1990's) relied on the ability of the inner tracking system to resolve the position of the individual interaction points along the beam and associate physics objects with the correct interaction point.
-%% Since the interaction time spread (due to the finite bunch lengths) could be similarly used to complement this tracking capability, the possibility of adding timing layers in the HL-LHC upgrades, for example, has been proposed\,\cite{CHEF}, and both ATLAS and CMS are currently planning such upgrades.
-
-%% Roughly coincident with this renewed interest in sub 50 picosecond timing there has been recent work evaluating a number of promising technologies as can be found for example in the review of Vavra \cite{Vavra}.
-
-
-
-%The high luminosity upgrade of the CERN Large Hadron Collider (HL-LHC) foreseen to start in 2026 will provide an instantaneous luminosity of up to $5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$ with a bunch spacing of 25\,ns, and an average pile-up of up to 200 collisions per bunch crossing\,\cite{hlLhcTecDesRep}.
-%To reduce the effects of pile-up on the physics analyses, both the ATLAS and CMS experiments are planning to implement dedicated systems to measure the time of arrival of minimum ionising particles (MIPs) with an accuracy of about 30 ps.
-%By providing the time of arrival information of MIPs, these systems allow for the correct association of particles to their primary vertices in the case where the latter have a proximity in space that renders their separation impossible.
-%An improved time of arrival resolution would also effectively reduce the vertex density, and improve the vertex reconstruction capability of the experiments.
-%These timing detectors will be subjected to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of up to $10^{15}$\,cm$^{-2}$ for the goal integrated luminosity of HL-LHC of 3000\,fb$^{-1}$.
-
 By exploiting the design margins of HL-LHC, it will be possible to achieve an ultimate luminosity of up to $7.5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$ and an ultimate integrated luminosity of 4000\,fb$^{-1}$\,\cite{hlLhcTecDesRep}.
 In this scenario the pile-up and fluence to which the detectors will be exposed will increase proportionally to the instantaneous and integrated luminosity, respectively.
-
-%Different detector technologies are studied for the realization of the MIP timing systems.
-%Silicon photomultipliers (SiPMs) coupled to scintillating crystals and low gain avalanche devices (LGADs) constitute currently the baseline technology choosen by ATLAS and CMS\,\cite{cmsMIPtiming,atlasMIPtiming}.
 
 All the proposed technologies for ATLAS and CMS timing layers involve silicon with internal gain: Silicon Photomultipliers (SiPMs) or Low Gain Avalanche Diodes (LGADs)\,\cite{cmsMIPtiming,atlasMIPtiming}.
 In this context, avalanche silicon diode structures with a capacitively coupled readout for charged particle timing were evaluated.
@@ -176,11 +131,9 @@ Finally, polyimide is deposited around the mesa structure and the wafer is diced
 
 \begin{figure}
   \centering
-  \subfloat{\includegraphics[width = 0.3 \textwidth, trim=0.3cm 0.3cm 0.2cm 0.3cm, clip]{APD_Diagram}}
-  \hfill
-  %\subfloat{\includegraphics[width = 0.5 \textwidth]{apdSectionColorsLabels}}
-  \subfloat{\includegraphics[width = 0.5 \textwidth]{apdSectionNew}}
-  \caption{Schematic cross-sections of a deep diffused APD. {\bf Left:} centre of the detector. The thickness of the depleted region corresponds to a bias voltage of 1.8\,kV. {\bf Right:} detector edge.}
+  \subfloat{\includegraphics[width = 0.6 \columnwidth, trim=0.3cm 0.3cm 0.2cm 0.3cm, clip]{APD_Diagram}}\\
+  \subfloat{\includegraphics[width = 0.8 \columnwidth]{apdSectionNew}}
+  \caption{Schematic cross-sections of a deep diffused APD. {\bf Top:} centre of the detector. The thickness of the depleted region corresponds to a bias voltage of 1.8\,kV. {\bf Bottom:} detector edge.}
   \label{fig:apdDia}
 \end{figure}
 
@@ -230,7 +183,6 @@ No annealing steps were performed after irradiation, however, it is estimated th
 APDs with a nominal active area of $8 \times 8$~mm$^2$ were characterised in several beam tests.
 The dies of these devices have an area of $10 \times 10$~mm$^2$ and a square mesa structure with 7.5\,mm sides.
 
-%% Studies similar to the one reported in section\,\ref{sec:unif8x8laser} have shown that the amplitude of the signal produced by the sensor when illuminated by a laser depends on the distance between the point in which the sensor is struck by the laser and the point where the sensor is connected to the readout electronics.
 As shown in section\,\ref{sec:unif8x8laser}, the amplitude of the signal produced by the sensor when illuminated by a laser depends on the distance between the point in which the sensor is struck by the laser and the point where the sensor is connected to the readout electronics.
 This behaviour is the result of the non-negligible resistance of the conducting layers applied to the p- and n-side of the detector.
 
@@ -267,14 +219,14 @@ The result of this scaling law is shown in figure \ref{fig:gainVsV}(Right).
 It describes the data up to a gain of $\approx$1000 and may prove useful for discriminating among impact ionisation models that appear in the literature and as options in TCAD\footnote{Technology Computer Aided Design.} software for modelling such devices.
 It should be noted that this particular definition of gain, as it applies to visible light photodetection in an APD, is different from the gain obtained from the response to minimum ionising particles (or the IR laser model used) since, in the former case all photoelectrons traverse the region where impact ionisation occurs.
 
-\begin{figure}
+\begin{figure*}[h]
   \centering
   \subfloat{\includegraphics[width = 0.55 \textwidth]{gainVsV}}
   \hfill
   \subfloat{\includegraphics[width = 0.45 \textwidth]{gainVsVscaled}}
   \caption{\textbf{Left:} Gain of a $8 \times 8$ mm$^2$ APDs as a function of bias voltage at different temperatures. The measurement was performed using a blue LED. \textbf{Right:} By shifting the bias for each curve according to the law described in the text, a scaling law is found.}
   \label{fig:gainVsV}
-\end{figure}
+\end{figure*}
 
 \section{Laboratory Characterisation of Irradiated $2 \times 2$~mm$^2$ APDs}
 \label{sec:irrad2x2}
@@ -330,7 +282,7 @@ For the measurements of intensity as a function of bias voltage and the timing m
 
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \textwidth]{IVnIrrad}
+  \includegraphics[width = \columnwidth]{IVnIrrad}
   \caption{Current-voltage characteristics of the $2 \times 2$~mm$^2$ APDs measured at $-20^\circ$C for different neutron fluences.}
   \label{fig:iv2x2}
 \end{figure}
@@ -354,7 +306,7 @@ Further studies of the current generation in these detectors after irradiation c
 The sensor irradiated to $\Phi_{eq} = 3 \cdot 10^{14}$\,cm$^{-2}$ shows a breakdown around 1600\,V, therefore no information about its IV characteristic is available at higher bias voltages.
 This also applies to the amplitude measurements presented below.
 
-\begin{figure}
+\begin{figure*}[h]
   \centering
   \subfloat[$\Phi_{eq} = 0$\,cm$^{-2}$, 1700\,V]{\includegraphics[width = 0.45 \textwidth]{APD_2B_3_IR_XY_peak_scan_m20C}}\\
   \subfloat[$\Phi_{eq} = 3 \cdot 10^{13}$\,cm$^{-2}$, 1679\,V]{\includegraphics[width = 0.45 \textwidth]{APD_2B_3_IR_XY_peak_scan_m20C_3E13}}\hfill
@@ -363,7 +315,7 @@ This also applies to the amplitude measurements presented below.
   \subfloat[$\Phi_{eq} = 10^{15}$\,cm$^{-2}$, 1644\,V]{\includegraphics[width = 0.45 \textwidth]{APD_2B_9_IR_XY_peak_scan_m20C_1E15}}
   \caption{Signal amplitude as a function of the $x-y$ position where the laser was focused on the sensors measured at $-20^\circ$C. The laser intensity corresponds to 15\,MIPs. An amplification of 10\,dB was used.}
   \label{fig:xyScanIR_2x2}
-\end{figure}
+\end{figure*}
 
 \paragraph{Uniformity of response}
 The uniformity of response was measured using an infrared laser with pulses of an intensity corresponding to 15\,MIPs and an amplification of 10\,dB.
@@ -389,7 +341,7 @@ The measurements shown in the rest of this section were performed by shining the
 
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \textwidth]{ampliIrrad_5mV}
+  \includegraphics[width = \columnwidth]{ampliIrrad_5mV}
   \caption{Amplitude of the APDs signal as a function of bias voltage and fluence measured at $-20^\circ$C. The laser intensity corresponds to 15\,MIPs. An amplification of 10\,dB was used.}
   \label{fig:ampli2x2_15MIP}
 \end{figure}
@@ -411,7 +363,7 @@ The amplification used for the time resolution measurements was 40\,dB, and no a
 
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \textwidth]{APD_394-1-51_1665V_evt1100_2pulses}
+  \includegraphics[width = \columnwidth]{APD_394-1-51_1665V_evt1100_2pulses}
   \caption{Waveform from a non-irradiated $2 \times 2$~mm$^2$ APD biased at 1665\,V operated at $-20^\circ$C. The laser intensity corresponds to 0.8\,MIPs. An amplification of 40\,dB was used.}
   \label{fig:pulses2x2timing}
 \end{figure}
@@ -425,7 +377,7 @@ The time resolution of the sensor irradiated to $\Phi_{eq} = 3 \cdot 10^{14}$\,c
 
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \textwidth]{ampli2x2APDs}
+  \includegraphics[width = \columnwidth]{ampli2x2APDs}
   \caption{Average amplitude of the $2 \times 2$~mm$^2$ APDs signal as a function of bias voltage and fluence measured at $-20^\circ$C. The laser intensity corresponds to 0.8\,MIPs. An amplification of 40\,dB was used.}
   \label{fig:ampli2x2}
 \end{figure}
@@ -437,7 +389,7 @@ This suggests that the multiplication mechanism affects the noise of the sensors
 
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \textwidth]{noise2x2APDs}
+  \includegraphics[width = \columnwidth]{noise2x2APDs}
   \caption{$2 \times 2$~mm$^2$ APDs' noise as a function of bias voltage and fluence measured at $-20^\circ$C. An amplification of 40\,dB was used.}
   \label{fig:noise2x2}
 \end{figure}
@@ -449,7 +401,7 @@ This is attributed to the lower value of gain of this sensor compared to the oth
 
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \textwidth]{snr2x2APDs}
+  \includegraphics[width = \columnwidth]{snr2x2APDs}
   \caption{Signal to noise ratio (SNR) of the $2 \times 2$~mm$^2$ APDs as a function of bias voltage and fluence measured at $-20^\circ$C. The laser intensity corresponds to 0.8\,MIPs. An amplification of 40\,dB was used.}
   \label{fig:snr2x2}
 \end{figure}
@@ -466,8 +418,7 @@ The difference between the rise time of the sensors lies within 11\%, the rise t
 %1e15 -> risetime 5.1-5.3 ns
 \begin{figure}
   \centering
-  %\includegraphics[width = 0.6 \textwidth]{riseTime2x2APDs}
-  \includegraphics[width = 0.6 \textwidth]{riseTime2x2APDsNo1e15}
+  \includegraphics[width = \columnwidth]{riseTime2x2APDsNo1e15}
   \caption{20\%-to-80\% rise time of the $2 \times 2$~mm$^2$ APDs signal as a function of bias voltage and fluence measured at $-20^\circ$C. The laser intensity corresponds to 0.8\,MIPs. An amplification of 40\,dB was used.}
   \label{fig:riseTime2x2}
 \end{figure}
@@ -490,8 +441,7 @@ The behaviour is however not monotonous.
 %1e15 -> time res 508-553 ps
 \begin{figure}
   \centering
-  %\includegraphics[width = 0.6 \textwidth]{timeRes2x2APDs}
-  \includegraphics[width = 0.6 \textwidth]{timeRes2x2APDsNo1e15}
+  \includegraphics[width = \columnwidth]{timeRes2x2APDsNo1e15}
   \caption{Single pulse time resolution of the $2 \times 2$~mm$^2$ APDs as a function of bias voltage and fluence measured at $-20^\circ$C. The laser intensity corresponds to 0.8\,MIPs. An amplification of 40\,dB was used.}
   \label{fig:timeRes2x2}
 \end{figure}
@@ -502,7 +452,7 @@ The dashed line represents a 1/SNR behaviour.
 
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \textwidth]{timeRes2x2APDsNo1e15_SNR}
+  \includegraphics[width = \columnwidth]{timeRes2x2APDsNo1e15_SNR}
   \caption{Single pulse time resolution of the $2 \times 2$~mm$^2$ APDs as a function of signal to noise ratio and fluence measured at $-20^\circ$C. The laser intensity corresponds to 0.8\,MIPs. An amplification of 40\,dB was used.}
   \label{fig:timeRes2x2_snr}
 \end{figure}
@@ -530,7 +480,7 @@ The amplitude of the signal decreases with increasing distance from the electric
 This effect is attributed to the non-negligible resistivity of the conductive layers applied to the detector.
 The dependency of the signal amplitude on the detector position can result in a worsened time resolution.
 
-\begin{figure}
+\begin{figure*}[h]
   \centering
   \subfloat[Amplitude]{\includegraphics[width = 0.45 \textwidth]{peakMap8x8fine}}\hfill
   \subfloat[Integrated signal]{\includegraphics[width = 0.45 \textwidth]{chargeMap8x8fine}}\\
@@ -538,7 +488,7 @@ The dependency of the signal amplitude on the detector position can result in a 
   \subfloat[Ratio vs distance]{\includegraphics[width = 0.45 \textwidth]{ratioPeakChargeDistance}}\\
   \caption{Signal amplitude {\bf (a)}, integral {\bf (b)}, and ratio between amplitude and integral {\bf (c)} of a $8 \times 8$~mm$^2$ APD as a function of the $x-y$ impact point of the laser beam on the sensor. {\bf (d)} Ratio between amplitude and integral as a function of distance from the electrical contact of the sensor. The sensor was biased at 1700\,V, at a temperature of $-20^\circ$C. The laser intensity corresponds to 15 MIPs. An amplification of 10\,dB was used.}
   \label{fig:8x8unif_noMetal}
-\end{figure}
+\end{figure*}
 
 The two approaches taken to reduce this source of non-uniformity are described in section\,\ref{sec:samples}.
 %% The results obtained with the AC-coupled mesh readout are shown in section\,\ref{sec:tb8x8}.
@@ -564,14 +514,14 @@ The signal to noise ratio is lower than the one of the non-irradiated $2 \times 
 
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \textwidth]{ampli8x8metal}
+  \includegraphics[width = \columnwidth]{ampli8x8metal}
   \caption{Average amplitude of the metallised $8 \times 8$~mm$^2$ APD signal as a function of bias voltage measured at $20^\circ$C. The laser intensity corresponds to 0.8\,MIPs. An amplification of 40\,dB was used.}
   \label{fig:ampli8x8metal}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \textwidth]{noise8x8metal}
+  \includegraphics[width = \columnwidth]{noise8x8metal}
   \caption{$8 \times 8$~mm$^2$ APD's noise as a function of bias voltage measured at $20^\circ$C. An amplification of 40\,dB was used.}
   \label{fig:noise8x8metal}
 \end{figure}
@@ -582,7 +532,7 @@ This is a consequence of the bigger sensor capacitance.
 
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \textwidth]{riseTime8x8metal}
+  \includegraphics[width = \columnwidth]{riseTime8x8metal}
   \caption{20\%-to-80\% rise time of the metallised $8 \times 8$~mm$^2$ APD signal as a function of bias voltage measured at $20^\circ$C. The laser intensity corresponds to 0.8\,MIPs. An amplification of 40\,dB was used.}
   \label{fig:riseTime8x8metal}
 \end{figure}
@@ -592,7 +542,7 @@ The jitter decreases with increasing bias voltage and is found to scale with a 1
 
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \textwidth]{timeRes8x8metal}
+  \includegraphics[width = \columnwidth]{timeRes8x8metal}
   \caption{Single pulse time resolution of the metallised $8 \times 8$~mm$^2$ APDs as a function of bias voltage measured at $20^\circ$C. The laser intensity corresponds to 0.8\,MIPs. An amplification of 40\,dB was used.}
   \label{fig:timeRes8x8metal}
 \end{figure}
@@ -623,7 +573,7 @@ Figure\,\ref{fig:risetime8x8impact} shows the average rise time as a function of
 The rise time is independent of the charged particle impact point.
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \textwidth]{risetime8x8vsImpact}
+  \includegraphics[width = \columnwidth]{risetime8x8vsImpact}
   \caption{Mean 20-to-80\% rise time as a function of impact position for a mesh readout $8 \times 8$~mm$^2$ APD. The measurement was performed using 150 GeV muons. The APD was operated at 1750\,V.}
   \label{fig:risetime8x8impact}
 \end{figure}
@@ -632,7 +582,7 @@ Figure\,\ref{fig:toa8x8impact} shows the time of arrival of the particles as mea
 The MCP PMT is used to define the origin of the time axis.
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \textwidth]{toa8x8VsImpact}
+  \includegraphics[width = \columnwidth]{toa8x8VsImpact}
   \caption{Average time of arrival as a function of impact position for a mesh readout $8 \times 8$~mm$^2$ APD. The measurement was performed using 150 GeV muons. The MCP PMT defines the origin of the time axis. The APD was operated at 1750\,V.}
   \label{fig:toa8x8impact}
 \end{figure}
@@ -644,7 +594,7 @@ The amplitude shows small variations within the detector active area and falls w
 The same result is obtained for the $y$ axis.
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \textwidth]{ampli8x8vsImpact}
+  \includegraphics[width = \columnwidth]{ampli8x8vsImpact}
   \caption{Average amplitude as a function of impact position for a mesh readout $8 \times 8$~mm$^2$ APD. The measurement was performed using 150 GeV muons. The APD was operated at 1750\,V.}
   \label{fig:ampli8x8impact}
 \end{figure}
@@ -668,8 +618,6 @@ The laser was shone at the centre of the detectors.
 The jitter is not degraded by exposure to fluences of up to at least $\Phi_{eq} = 6 \cdot 10^{13}$\,cm$^{-2}$.
 The jitter of the device irradiated to $\Phi_{eq} = 3 \cdot 10^{14}$\,cm$^{-2}$ could not be determined due to its unstable behaviour, while the device irradiated to $\Phi_{eq} = 10^{15}$\,cm$^{-2}$ did not show any gain.
 
-%These devices, with their current design, could be used as timing detectors in parts of the HL-LHC experiments where the fluences are in a range up to about $\Phi_{eq} = 10^{14}$\,cm$^{-2}$, with the upper bound to be studied with more detail than presented in this paper.
-
 The uniformity of response of deep diffused APDs with an active area of $8 \times 8$\,mm$^2$ was studied using an infrared laser.
 The amplitude of the signal shows a dependency on the distance between the point where the laser is shone and the electrical contact of the sensor.
 The deposition of an aluminium layer on the detector surfaces improved the uniformity.
@@ -678,10 +626,6 @@ The time jitter was found to be 22\,ps at a voltage of 1750\,V.
 The metallised sensors often showed instabilities when biased above 1700\,V.
 The origin of these instabilities is under investigation.
 
-%% Detectors with both DC- and AC-coupled readout will be characterised in beam tests to complement the information provided in this paper.
-%% The determination of time resolution, uniformity of response, and detection efficiency are the aim of the beam tests.
-%% The time resolution measurements with charged particles will include the \textit{Landau noise} term.
-%% A comparison with the jitter obtained with infrared light will provide a direct measurement of how this effect influences the time resolution in these devices.
 
 \textcolor{red}{The conclusions for the beam test and gain part have to be written}
 
@@ -696,7 +640,7 @@ This project has received funding from the European Union’s Horizon 2020 Resea
 The authors wish to thank J.~Bronuzzi for the help during the clean room operations and in the development of the recipe for the metallisation of the devices.
 The authors are grateful to the members of the CERN EP-DT-DD SSD team that developed and maintain the setups used in this work.
 
-\bibliographystyle{ieeetr}
+%\bibliographystyle{ieeetr}
 %\bibliographystyle{alpha}
 \bibliography{bibliography}
 
