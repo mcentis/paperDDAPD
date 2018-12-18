@@ -47,7 +47,7 @@
 \begin{abstract}
 The high luminosity upgrade of the CERN Large Hadron Collider (HL-LHC) will result in a pile-up of around 200 proton-proton collisions per bunch crossing.
 In order to reduce the impact of pile-up on physics analyses the ATLAS and CMS experiments are planning to use the timing of the reconstructed objects within one event.
-The primary proton-proton collisions have an RMS spread of $\approx$170~ps within one bunch crossing, and a time resolution of around 30 ps is required for pile-up mitigation.
+The primary proton-proton collisions have an RMS spread of $\approx$170~ps within one bunch crossing, and a time resolution of around 30\,ps is required for pile-up mitigation.
 This performance requires dedicated detectors for the timing of minimum ionising particles.
 The timing detectors will be subjected, for the goal integrated luminosity of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions, respectively.
   
@@ -68,10 +68,10 @@ Their timing performance was characterised using a pulsed infrared laser.
 \section{Introduction}
 
 The high luminosity upgrade of the CERN Large Hadron Collider (HL-LHC) foreseen to start in 2026 will provide an instantaneous luminosity of up to $5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$ with a bunch spacing of 25\,ns, and an average pile-up of up to 200 collisions per bunch crossing\,\cite{hlLhcTecDesRep}.
-This value of pile-up presents a challenge for the experiments, as currently ATLAS and CMS have reached a typical number of concurring interaction within the same bunch crossing (pile-up) of approximately 30\,\cite{atlasPileup,cmsPileup}.
+This value of pile-up presents a challenge for the experiments, as currently ATLAS and CMS have reached a typical number of concurring interaction within the same bunch crossing (pile-up) of approximately 35\,\cite{atlasPileup,cmsPileup}.
 At the present, the effects of pile-up on physics analyses are mitigated by resolving the primary vertices within one bunch crossing along the beam axis.
 The physics objects are then associated to the to the corresponding vertices by using the tracking information.
-This strategy was used also at Tevatron, where the pile-up was $\appox 6$ \textcolor{red}{ref?}.
+This strategy was used also at Tevatron, where the pile-up was $\approx 6$ \textcolor{red}{ref?}.
 The pile-up at HL-LHC will pose a challenge to this method, as a significant fraction of the primary vertices will have a distance smaller than the resolution of the vertex detectors, making an association to the reconstructed physics objects impossible.
 
 A different method to associate the reconstructed objects to separate vertices relies on the measurement of the time of arrival of the particles at the detectors.
@@ -221,9 +221,9 @@ It should be noted that this particular definition of gain, as it applies to vis
 
 \begin{figure*}[h]
   \centering
-  \subfloat{\includegraphics[width = 0.55 \textwidth]{gainVsV}}
+  \subfloat{\includegraphics[width = 0.53 \textwidth]{gainVsV}}
   \hfill
-  \subfloat{\includegraphics[width = 0.45 \textwidth]{gainVsVscaled}}
+  \subfloat{\includegraphics[width = 0.47 \textwidth]{gainVsVscaled}}
   \caption{\textbf{Left:} Gain of a $8 \times 8$ mm$^2$ APDs as a function of bias voltage at different temperatures. The measurement was performed using a blue LED. \textbf{Right:} By shifting the bias for each curve according to the law described in the text, a scaling law is found.}
   \label{fig:gainVsV}
 \end{figure*}
