@@ -28,8 +28,8 @@
 \ead{matteo.centis.vignali@cern.ch}
 
 \author[cern,lip]{M.~Gallinaro}
-\author[uprinc]{\textcolor{red}{B.~Harrop}}
-\author[uprinc]{\textcolor{red}{C.~Lu}}
+\author[uprinc]{B.~Harrop}
+\author[uprinc]{C.~Lu}
 \author[rmd]{M.~McClish}
 \author[cern]{M.~Moll}
 \author[upenn]{F.~M.~Newcomer}
@@ -53,7 +53,7 @@ The timing detectors will be subjected, for the goal integrated luminosity of 30
   
 In this paper, deep diffused Avalanche Photo Diodes (APDs) are examined as candidate timing detectors for HL-LHC applications.
 
-Devices with an active area of $8 \times 8$\,mm$^2$ are characterised using a pulsed infrared laser and, in some cases, an high energy muon beam.
+Devices with an active area of $8 \times 8$\,mm$^2$ are characterised using a pulsed infrared laser and, in some cases, a high energy muon beam.
 The timing performance as well as the uniformity of response are examined.
 
 The effects of radiation damage on current, signal amplitude, noise, and timing of the APDs are evaluated using detectors with an active area of $2 \times 2$\,mm$^2$.
@@ -68,10 +68,10 @@ Their timing performance was characterised using a pulsed infrared laser.
 \section{Introduction}
 
 The high luminosity upgrade of the CERN Large Hadron Collider (HL-LHC) foreseen to start in 2026 will provide an instantaneous luminosity of up to $5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$ with a bunch spacing of 25\,ns, and an average pile-up of up to 200 collisions per bunch crossing\,\cite{hlLhcTecDesRep}.
-This value of pile-up presents a challenge for the experiments, as currently ATLAS and CMS have reached a typical number of concurring interaction within the same bunch crossing (pile-up) of approximately 35\,\cite{atlasPileup,cmsPileup}.
-At the present, the effects of pile-up on physics analyses are mitigated by resolving the primary vertices within one bunch crossing along the beam axis.
-The physics objects are then associated to the to the corresponding vertices by using the tracking information.
-This strategy was used also at Tevatron, where the pile-up was $\approx 6$ \textcolor{red}{ref?}.
+This value of pile-up presents a challenge for the experiments, as currently ATLAS and CMS have reached a typical number of concurrent interactions within the same bunch crossing (pile-up) of approximately 35\,\cite{atlasPileup,cmsPileup}.
+At present, the effects of pile-up on physics analyses are mitigated by resolving the primary vertices within one bunch crossing along the beam axis.
+The physics objects are then associated to the corresponding vertices by using the tracking information.
+This strategy was used also at Tevatron, where the pile-up was $\approx 6$.
 The pile-up at HL-LHC will pose a challenge to this method, as a significant fraction of the primary vertices will have a distance smaller than the resolution of the vertex detectors, making an association to the reconstructed physics objects impossible.
 
 A different method to associate the reconstructed objects to separate vertices relies on the measurement of the time of arrival of the particles at the detectors.
@@ -79,7 +79,7 @@ A sufficiently accurate time measurement effectively reduces the vertex density,
 Since the RMS spread of the primary vertices at HL-LHC is foreseen to be $\approx$ 170~ps within one bunch crossing, a minimum ionising particle (MIP) time resolution of $\approx 30$~ps is necessary to improve the association of the particles to their correct vertex\,\cite{cmsMIPtiming,atlasMIPtiming}.
 
 To reach this performance, dedicated detector systems will be needed and both ATLAS and CMS are planning such upgrades\,\cite{cmsMIPtiming,atlasMIPtiming}.
-The timing detectors will be subjected, for the goal integrated luminosity of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions, respectively.
+The timing detectors will be subjected, for the integrated luminosity goal of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions, respectively.
 
 By exploiting the design margins of HL-LHC, it will be possible to achieve an ultimate luminosity of up to $7.5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$ and an ultimate integrated luminosity of 4000\,fb$^{-1}$\,\cite{hlLhcTecDesRep}.
 In this scenario the pile-up and fluence to which the detectors will be exposed will increase proportionally to the instantaneous and integrated luminosity, respectively.
@@ -555,7 +555,7 @@ This instability influenced the choice of values of bias voltage used in this se
 \label{sec:tb8x8}
 
 Several mesh readout $8 \times 8$~mm$^2$ APDs were characterised in terms of their uniformity of response using a 150 GeV muon beam in the H4 beam line at the CERN SPS\,\cite{h4page}.
-For the measurements described below a fast transimpedance amplifier with roughly 10\,$\Omega$ effective input impedance was used\textcolor{red}{(ref. suggestion from Mitch)}.
+For the measurements described below a fast transimpedance amplifier with roughly 10\,$\Omega$ effective input impedance was used\,\cite{whiteACES2014}.
 The bandwidth of the amplifier was 1 GHz.
 The measurements were carried out within the infrastructure of PICOSEC\,\cite{bortfeld2018}.
 In particular, the PICOSEC setup provided particle tracking with a resolution of 40\,$\mu$m and a time reference based on a Hamamatsu MCP PMT\footnote{Micro Channel Plate Photomultiplier.} which detected charged particles by the Cerenkov light produced in the quartz entrance window providing a reference time jitter of $<10$\,picoseconds\,\cite{sohl2018}.
@@ -565,7 +565,7 @@ The $x$ and $y$ axes were horizontal and vertical, respectively, their origin co
 Using the above setup and a 2.5\,GHz 20\,GSa/s digital oscilloscope to record the waveforms the timing measurements of the mesh readout APDs were derived using a 20\% constant fraction algorithm to define the signal arrival time.
 To ensure the consistency of this timing measurement the dependence of the waveform characteristics and in particular the rise time dependence on the impact position of the muons was studied using the H4 beam data.
 For this particular study a sample of $\approx$1000 events were recorded with the sensor operated at a bias of 1750~V resulting in a most probable amplitude (MIP peak) of 65~mV at the oscilloscope input.
-The APD was kept at room temperature during the measurements.
+The APD and amplifier were operated at room temperature ($\approx20^\circ$C) during the measurements.
 
 A threshold of 40\,mV was applied to the MCP PMT signal to ensure an accurate reference time information for the time of arrival and rise time measurements.
 The typical pulse rise time (measured at 20-80\% levels) was 630~ps with an RMS spread of $\approx$160~ps.
@@ -605,6 +605,9 @@ The same result is obtained for the $y$ axis.
 For their operation at HL-LHC, the ATLAS and CMS experiments foresee detector upgrades that add timing information of reconstructed charged particles, aiming at a time resolution of around 30\,ps.
 The detectors used in these systems will be exposed to irradiation fluences of up to $\Phi_{eq} = 10^{15}$\,cm$^{-2}$ for the goal integrated luminosity of HL-LHC of 3000\,fb$^{-1}$.
 
+The dependence of the gain of deep diffused APDs on bias voltage and temperature was studied using a pulsed blue LED.
+A scaling law for the gain was found, allowing to determine which change in bias voltage is necessary to maintain the same gain when varying the APD temperature.
+
 The parameters influencing the time resolution of deep diffused APDs with DC-coupled readout, as well as the uniformity of response of these devices, were measured.
 
 Deep diffused APDs with an active area of $2 \times 2$\,mm$^2$ produced by RMD were irradiated with reactor neutrons up to a fluence of $\Phi_{eq} = 10^{15}$\,cm$^{-2}$.
@@ -612,9 +615,9 @@ The uniformity of response was studied using a pulsed infrared laser.
 The sensitive area of the detectors is affected by irradiation, maintaining a uniform response at the centre of the sensors.
 Current, amplitude, and timing characteristics of the detectors were measured at a temperature of $-20^\circ$C, before and after irradiation.
 From the current-voltage characteristic it was found that the bulk current of the detectors increases with irradiation and that the gain decreases with irradiation.
-The latter observation is supported by measurements of the APDs signal performed using a pulsed infrared laser shone at the centre of the detectors.
+The latter observation is supported by measurements of the APDs signal performed using a pulsed infrared laser illuminating the centre of the detectors.
 The time jitter of the APDs was determined using a pulsed infrared laser with an intensity corresponding to 0.8\,MIPs per pulse.
-The laser was shone at the centre of the detectors.
+The laser illuminated the centre of the detectors.
 The jitter is not degraded by exposure to fluences of up to at least $\Phi_{eq} = 6 \cdot 10^{13}$\,cm$^{-2}$.
 The jitter of the device irradiated to $\Phi_{eq} = 3 \cdot 10^{14}$\,cm$^{-2}$ could not be determined due to its unstable behaviour, while the device irradiated to $\Phi_{eq} = 10^{15}$\,cm$^{-2}$ did not show any gain.
 
@@ -626,8 +629,9 @@ The time jitter was found to be 22\,ps at a voltage of 1750\,V.
 The metallised sensors often showed instabilities when biased above 1700\,V.
 The origin of these instabilities is under investigation.
 
-
-\textcolor{red}{The conclusions for the beam test and gain part have to be written}
+The mesh readout development has several potential advantages, some of which were demonstrated by the above measurements.
+Because the mesh readout results in a low impedance path for capturing the induced signal from charge motion within the silicon, it provides a very uniform signal shape (rise time) independent of impact position.
+Also the effective detector capacitance seen by the amplifier is reduced in the mesh readout enabling development of fast low noise signal procesing front end, which will be discussed elsewhere.
 
 Deep diffused APDs were characterised for response uniformity and timing performance in laboratory and test beam studies, before and after irradiation.
 An extensive set of results is presented.
@@ -639,6 +643,7 @@ The work summarised in this paper has been performed within the framework of the
 This project has received funding from the European Union’s Horizon 2020 Research and Innovation programme under Grant Agreement no.\ 654168.
 The authors wish to thank J.~Bronuzzi for the help during the clean room operations and in the development of the recipe for the metallisation of the devices.
 The authors are grateful to the members of the CERN EP-DT-DD SSD team that developed and maintain the setups used in this work.
+S.\ White acknowledges partial support through the US CMS program under DOE contract No.\ DE-AC02-07CH11359.
 
 %\bibliographystyle{ieeetr}
 %\bibliographystyle{alpha}
