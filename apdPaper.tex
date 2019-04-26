@@ -220,8 +220,8 @@ The APD signal was shaped, and the measured pulse height used for the determinat
 Unity gain refers to the amplitude obtained at $\approx$500 V bias, where the amplitude shows a weak dependence on the bias voltage~$U$.
 The measurements were performed at different temperatures, and the results are reported in figure\,\ref{fig:gainVsV}.
 An attempt was made to parametrize the  voltage~$U$ required for a given gain as a function of temperature~$T$.
-A temperature dependent shift $U' = U -2.45~ V/^\circ C \cdot \Delta T( 0^\circ C)$ describes the change in voltage necessary to normalise a given value of gain to the gain obtained at $0^\circ C$ when the temperature of the APD is changed.
-Here $\Delta T( 0^\circ C)$ gives the temperature difference from $0^\circ C$. 
+A temperature dependent shift $U' = U -2.45~\textrm{V}/^\circ\textrm{C} \cdot \Delta T( 0^\circ\textrm{C})$ describes the change in voltage necessary to normalise a given value of gain to the gain obtained at $0^\circ\textrm{C}$ when the temperature of the APD is changed.
+Here $\Delta T( 0^\circ\textrm{C})$ gives the temperature difference from $0^\circ\textrm{C}$. 
 The result of this scaling law is shown in figure \ref{fig:gainVsV}(Right).
 It describes the data up to a gain of $\approx$1000 and may prove useful for discriminating among impact ionisation models that appear in the literature and as options in TCAD\footnote{Technology Computer Aided Design.} software for modelling such devices.
 It should be noted that this particular definition of gain, as it applies to visible light photodetection in an APD, is different from the gain obtained from the response to minimum ionising particles (or the IR laser model used) since, in the former case all photoelectrons traverse the region where impact ionisation occurs.
@@ -250,7 +250,7 @@ The response of the APDs to a pulsed infrared laser was measured in a different 
 The laser has a wavelength of 1064\,nm and the pulses have a duration of 200\,ps.
 The repetition rate was chosen to be 200\,Hz.
 The intensity of the light impinging on the APD was determined to correspond to a charge deposition in the sensor of 15 or 0.8\,MIPs per pulse, depending on the measurement.
-A shutter is used to change the light intensity.
+A variable slit is used to change the light intensity.
 The amount of deposited charge per laser pulse was measured using a non-irradiated pad diode of known thickness.
 The charge deposited for one MIP is defined in this work as 74 electron hole pairs per micron of silicon.
 The wavelength used has an absorption length in silicon of about 1\,mm, resulting in the generation of electron hole pairs through the whole sensor thickness.
@@ -371,7 +371,7 @@ The amplification used for the time resolution measurements was 40\,dB, and no a
 \begin{figure}
   \centering
   \includegraphics[width = 0.6 \columnwidth]{APD_394-1-51_1665V_evt1100_2pulses}
-  \caption{Waveform from a non-irradiated $2 \times 2$~mm$^2$ APD biased at 1665\,V operated at $-20^\circ$C. The laser intensity corresponds to 0.8\,MIPs. An amplification of 40\,dB was used.}
+  \caption{Waveform from a non-irradiated $2 \times 2$~mm$^2$ APD biased at 1665\,V operated at $-20^\circ$C. The laser intensity corresponds to 0.8\,MIPs. An amplification of 40\,dB was used. The signal undershoot is caused by the readout electronics.}
   \label{fig:pulses2x2timing}
 \end{figure}
 
