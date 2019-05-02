@@ -52,9 +52,9 @@
 The high luminosity upgrade of the CERN Large Hadron Collider (HL-LHC) will result in a pile-up of around 200 proton-proton collisions per bunch crossing.
 In order to reduce the impact of pile-up on physics analyses the ATLAS and CMS experiments are planning to use the timing of the reconstructed objects within one event.
 The primary proton-proton collisions have an RMS spread of $\approx$170~ps within one bunch crossing, and a time resolution of around 30\,ps is required for pile-up mitigation.
-This performance requires dedicated detectors for the timing of minimum ionising particles.
-The timing detectors will be subjected, for the goal integrated luminosity of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions, respectively.
-  
+This performance requires dedicated detectors for the determination of the time of the minimum ionising particle tracks.
+The timing detectors will be subjected, for the goal integrated luminosity of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions of the CMS detector, respectively.
+
 In this paper, deep diffused Avalanche Photo Diodes (APDs) are examined as candidate timing detectors for HL-LHC applications.
 
 Devices with an active area of $8 \times 8$\,mm$^2$ are characterised using a pulsed infrared laser and, in some cases, a high energy muon beam.
@@ -205,6 +205,8 @@ In this way it is possible for the electronics to directly read out both signals
 
 Another method used to improve the uniformity of response is the metallisation of both the p- and n-side of the detector.
 The metallisation consists in an aluminium deposition containing openings for laser illumination.
+The p-side metallisation is continuous except for circular 2\,mm diameter hole at the detector centre.
+The metallisation on the n-side consists of a grid structure with square openings with a side of 100\,$\mu$m.
 The detectors produced with this configuration have a DC-coupled readout and were used in laboratory tests.
 These sensors were mounted on the same kind of PCBs used for the $2 \times 2$~mm$^2$ APDs, that contain a temperature sensor and the connectors to bias and readout the sensor.
 
@@ -252,11 +254,15 @@ The repetition rate was chosen to be 200\,Hz.
 The intensity of the light impinging on the APD was determined to correspond to a charge deposition in the sensor of 15 or 0.8\,MIPs per pulse, depending on the measurement.
 A variable slit is used to change the light intensity.
 The amount of deposited charge per laser pulse was measured using a non-irradiated pad diode of known thickness.
+The pad diode signal was digitised using an oscilloscope and integrated, leading to the deposited charge.
+These measurements were repeated with and without the use of an amplifier and yield to the same result.
 The charge deposited for one MIP is defined in this work as 74 electron hole pairs per micron of silicon.
 The wavelength used has an absorption length in silicon of about 1\,mm, resulting in the generation of electron hole pairs through the whole sensor thickness.
 The light pulses are propagated from the laser to the sensor through an optical fibre.
 A coupler diverts part of the light to a photodiode that is used to monitor the intensity of the light pulses.
-An optical system focuses the light on the sensor surface producing a beam spot of about 15\,$\mu$m in diameter.
+The relation between the photodiode response and the amount of charge produced by the light pulses was determined using the pad diode measurements mentioned above.
+An optical system focuses the light on the sensor, producing a beam spot with a full width half maximum of about 35\,$\mu$m as measured on the sensor surface using a knife-edge technique.
+The sensor is mounted on a 3 axis linear stage system that allows to move the sensor with respect to the laser focusing system.
 The bias voltage of the sensor under test is provided by a voltage source containing a picoammeter used to monitor the current flowing through the sensor.
 The temperature of the APD was controlled using a cooling system constituted by a Peltier element and a chiller.
 The temperature measured by the temperature sensor on the PCB was used as input to the Peltier control system.
@@ -307,8 +313,8 @@ As the bulk current is amplified, the shape of the irradiated sensors' curves is
 The change in the magnitude of the current at high voltages is different with respect to the non-irradiated sensor, suggesting that the gain of the detectors is reduced by irradiation, or respectively that a higher bias voltage is required to obtain the same gain as for the non-irradiated sensor.
 
 The current related damage rate ($\alpha$) was estimated at 200\,V, where no multiplication is expected.
-Under the assumption that the depleted volume at this voltage does not change with irradiation, the measured value of $\alpha$ is of the expected order of magnitude.
-Further studies of the current generation in these detectors after irradiation can be found in\,\cite{ugobonoThesis}.
+Under the assumption that the depleted volume at this voltage does not change with irradiation, the measured value of $\alpha$ is of the expected order of magnitude\,\cite{ugobonoThesis}.
+Further studies of the current generation in these detectors after irradiation can also be found in\,\cite{ugobonoThesis}.
 
 The sensor irradiated to $\Phi_{eq} = 3 \cdot 10^{14}$\,cm$^{-2}$ shows a breakdown around 1600\,V, therefore no information about its IV characteristic is available at higher bias voltages.
 This also applies to the amplitude measurements presented below.
@@ -326,7 +332,7 @@ This also applies to the amplitude measurements presented below.
 
 \paragraph{Uniformity of response}
 The uniformity of response was measured using an infrared laser with pulses of an intensity corresponding to 15\,MIPs and an amplification of 10\,dB.
-The laser was focused on different parts of the sensors and the average of 256 waveforms was stored and the signal amplitude extracted.
+The laser was focused on different parts of the sensors in a 50\,$\mu$m step grid and the average of 256 waveforms was stored and the signal amplitude extracted for each position.
 The signal amplitude as a function of position of the laser spot on the sensors is shown in figure\,\ref{fig:xyScanIR_2x2}.
 The difference in the bias voltage applied to the detectors is due to the current drawn by the detectors under bias.
 The biasing and readout circuit had a total resistance of 13\,M$\Omega$ connected in series to the sensor under test.
@@ -355,9 +361,10 @@ The measurements shown in the rest of this section were performed by shining the
 
 \paragraph{Signal amplitude}
 The amplitude was measured from the baseline of the pulse, calculated using the part of the waveform preceding the laser pulse.
+The amplitude was determined using a parabolic interpolation of the waveform highest point and its first neighbours.
 The results are shown in figure\,\ref{fig:ampli2x2_15MIP} as a function of bias voltage and fluence.
 
-The measured amplitudes present similar values up to 1200\,V, for all the fluences.
+The measured amplitudes present a spread of less than 3\,mV up to 1200\,V bias, for all the fluences.
 For voltage values above 1200\,V, the signal amplitude decreases with increasing fluence, indicating a reduction of the gain for the irradiated detectors.
 The behaviour of the detectors indicates that for fluences at least up to $\Phi_{eq} = 6 \cdot 10^{13}$\,cm$^{-2}$ the gain of the detectors could be recovered by applying a higher bias voltage.
 
@@ -391,7 +398,10 @@ The time resolution of the sensor irradiated to $\Phi_{eq} = 3 \cdot 10^{14}$\,c
 
 The noise is defined as the standard deviation of the distribution of the waveform points around the baseline, for the portion of the waveform preceding the pulse due to laser illumination.
 The noise of the APDs, as a function of bias voltage and irradiation fluence, is shown in figure\,\ref{fig:noise2x2}.
-The noise of the APDs with $\Phi_{eq} \leq 6 \cdot 10^{13}$\,cm$^{-2}$ shows a stronger dependence on the applied bias voltage than the the detector irradiated to $\Phi_{eq} = 10^{15}$\,cm$^{-2}$.
+The sharp increases in the noise of the sensors irradiated to $3$ and $6 \cdot 10^{13}$\,cm$^{-2}$ between 1700 and 1750\,V are the result of the automatic adjustment of the oscilloscope vertical scale to accommodate the increase of signal amplitude with voltage.
+The increase in the vertical scale of the oscilloscope results in an increase of the measured noise.
+A similar effect can be seen for the non-irradiated sensor around 1650\,V.
+Even accounting for the effects of the oscilloscope scale adjustment, the noise of the APDs with $\Phi_{eq} \leq 6 \cdot 10^{13}$\,cm$^{-2}$ shows a stronger dependence on the applied bias voltage than the the detector irradiated to $\Phi_{eq} = 10^{15}$\,cm$^{-2}$.
 This suggests that the multiplication mechanism affects the noise of the sensors.
 
 \begin{figure}
@@ -403,7 +413,8 @@ This suggests that the multiplication mechanism affects the noise of the sensors
 
 The signal to noise ratio (SNR) is defined as the ratio between amplitude and noise and is shown in figure\,\ref{fig:snr2x2}.
 The SNR is not a monotone function of the applied bias voltage.
-The sensor irradiated to $\Phi_{eq} = 10^{15}$\,cm$^{-2}$ shows a weaker dependence of SNR on bias voltage than the other sensors.
+This is the result of the adjustments of the oscilloscope vertical scale discussed above.
+In contrast to the other sensors, the sensor irradiated to $\Phi_{eq} = 10^{15}$\,cm$^{-2}$ shows no dependence of SNR on bias voltage.
 This is attributed to the lower value of gain of this sensor compared to the others.
 
 \begin{figure}
@@ -420,7 +431,7 @@ The rise time increases with increasing bias voltage.
 % how to explain this?
 % higher V -> higher depleted thickness -> lower weighting field?
 % higher V -> higher depleted thickness -> more space for the last electrons in the p-region to reach the multiplication region? the n-side has a higher depleted thickness, so hole collection does not matter?
-The difference between the rise time of the sensors lies within 11\%, the rise time does not seem to be affected by irradiation.
+The difference between the rise time of the sensors lies within 11\%, the rise time does not seem to be affected by irradiation for $\Phi_{eq} \leq 6 \cdot 10^{13}$\,cm$^{-2}$.
 
 %1e15 -> risetime 5.1-5.3 ns
 \begin{figure}
@@ -453,7 +464,7 @@ The behaviour is however not monotonous.
   \label{fig:timeRes2x2}
 \end{figure}
 
-The jitter is found to scale approximately as 1/SNR.
+The jitter is found to scale approximately as 1/SNR, as expected from the relation: $\textrm{jitter} \propto \textrm{rise time} / \textrm{SNR}$.
 Figure\,\ref{fig:timeRes2x2_snr} shows the jitter as a function of SNR.
 The dashed line represents a 1/SNR behaviour.
 
@@ -499,7 +510,7 @@ The dependency of the signal amplitude on the detector position can result in a 
 
 The two approaches taken to reduce this source of non-uniformity are described in section\,\ref{sec:samples}.
 %% The results obtained with the AC-coupled mesh readout are shown in section\,\ref{sec:tb8x8}.
-The DC-coupled metallisation resulted in a difference in the ratio between amplitude and charge of less than 2\% over a distance of 7\,mm between the points illuminated by the laser.
+The DC-coupled metallisation resulted in a spread of the ratio between amplitude and charge of less than 2\% over a distance of 7\,mm between the points illuminated by the laser.
 No dependency on the distance between illumination and electrical contact was observed.
 This measurement was performed on a sensor biased to 1800\,V at a temperature of $20^\circ$C.
 The metallisation was performed at the clean room facility of CMi-EPFL\,\cite{cmi}.
@@ -514,8 +525,8 @@ A light intensity corresponding to 0.8\,MIPs and an amplification of 40\,dB were
 The light was shone in the centre of the detector.
 The signal amplitude and noise are shown in figure\,\ref{fig:ampli8x8metal} and\,\ref{fig:noise8x8metal}, respectively.
 The signal amplitude is smaller than the one of the $2 \times 2$~mm$^2$ devices shown in section\,\ref{sec:irrad2x2}.
-This can be a consequence of a lower gain of the device under test or due to a bigger capacitance of the device.
-The noise is also smaller than the one of the $2 \times 2$~mm$^2$ devices.
+This is a consequence of the lower gain of the device under test and its larger capacitance.
+%The noise is also smaller than the one of the $2 \times 2$~mm$^2$ devices.
 Both signal amplitude and noise increase as a function of bias voltage.
 The signal to noise ratio is lower than the one of the non-irradiated $2 \times 2$~mm$^2$ APD presented in section\,\ref{sec:irrad2x2}, ranging from 18 to 62.
 
