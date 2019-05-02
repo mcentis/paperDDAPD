@@ -90,7 +90,7 @@ In this scenario the pile-up and fluence to which the detectors will be exposed 
 
 All the proposed technologies for ATLAS and CMS timing layers involve silicon with internal gain: Silicon Photomultipliers (SiPMs) or Low Gain Avalanche Diodes (LGADs)\,\cite{cmsMIPtiming,atlasMIPtiming}.
 In this context, avalanche silicon diode structures with a capacitively coupled readout for charged particle timing were evaluated.
-The characteristics of these detectors make them suitable for applications where a pixel size of approximately 1 cm$^{2}$ is appropriate.
+The characteristics of these detectors make them suitable for applications where a pixel size of approximately 1\,cm$^{2}$ is appropriate, like in e.g.\ the CMS barrel timing layer\,\cite{cmsMIPtiming}.
 This paper summarises the characterisation of deep diffused Avalanche Photo Diodes (APDs) produced by Radiation Monitoring Devices\,\cite{rmdAddress} used as timing detectors for charged particles.
 To improve the detector's timing performance, the APDs are used to directly detect the traversing particles, without a radiator medium where light is produced.
 Studies of these sensors as Minimum Ionising Particle (MIP) timing detectors, using an AC-coupled readout, were performed previously and showed promising results\,\cite{white2014}.
@@ -123,6 +123,7 @@ A mesa structure, where the n-type silicon forms a plateau that is joined to the
 Deep diffused APDs get their name from the process used to produce a pn-junction several tens of microns from the detector surface.
 The APDs used in this work are produced on silicon using the method explained in\,\cite{mcclish2004,apdPatent}.
 Grooves are carved on both sides of an n-doped silicon wafer and p-type dopants are diffused into the silicon.
+The n-doping is achieved through neutron transmutation doping, while the p-type dopants are aluminium and gallium.
 The grooves run parallel to the future die edges and shape the distribution of the p-type dopants into the silicon.
 This process results in an n-doped region enclosed by the p-doped silicon.
 The wafer is ground and polished on both sides.
@@ -226,7 +227,7 @@ A temperature dependent shift $U' = U -2.45~\textrm{V}/^\circ\textrm{C} \cdot \D
 Here $\Delta T( 0^\circ\textrm{C})$ gives the temperature difference from $0^\circ\textrm{C}$. 
 The result of this scaling law is shown in figure \ref{fig:gainVsV}(Right).
 It describes the data up to a gain of $\approx$1000 and may prove useful for discriminating among impact ionisation models that appear in the literature and as options in TCAD\footnote{Technology Computer Aided Design.} software for modelling such devices.
-It should be noted that this particular definition of gain, as it applies to visible light photodetection in an APD, is different from the gain obtained from the response to minimum ionising particles (or the IR laser model used) since, in the former case all photoelectrons traverse the region where impact ionisation occurs.
+It should be noted that this particular definition of gain, as it applies to visible light photodetection in an APD, is different from the gain obtained from the response to minimum ionising particles (or the IR laser model used) since, in the former case, all photoelectrons traverse the region where impact ionisation occurs.
 
 \begin{figure*}[h]
   \centering
@@ -396,7 +397,7 @@ The time resolution of the sensor irradiated to $\Phi_{eq} = 3 \cdot 10^{14}$\,c
   \label{fig:ampli2x2}
 \end{figure}
 
-The noise is defined as the standard deviation of the distribution of the waveform points around the baseline, for the portion of the waveform preceding the pulse due to laser illumination.
+The noise is defined as the standard deviation of the distribution of the waveform points around the baseline, for a 5\,ns portion of the waveform preceding the pulse due to laser illumination.
 The noise of the APDs, as a function of bias voltage and irradiation fluence, is shown in figure\,\ref{fig:noise2x2}.
 The sharp increases in the noise of the sensors irradiated to $3$ and $6 \cdot 10^{13}$\,cm$^{-2}$ between 1700 and 1750\,V are the result of the automatic adjustment of the oscilloscope vertical scale to accommodate the increase of signal amplitude with voltage.
 The increase in the vertical scale of the oscilloscope results in an increase of the measured noise.
@@ -485,9 +486,10 @@ These fluctuations, also known as {\em Landau noise}\,\cite{cartiglia2017}, can 
 
 The uniformity of response of the $8 \times 8$~mm$^2$ APDs was studied using an infrared laser.
 The amplitude and integrated signal are shown in figure\,\ref{fig:8x8unif_noMetal} as a function of the position where the laser illuminated the detector.
+The laser spot was moved across the sensor in 100\,$mu$m steps.
 The sensor was mounted with the n-side facing the PCB, and the laser shone on the p-side.
 The sensor was electrically connected using opaque conductive paint.
-The point of contact on the p-side can be seen at the coordinate (4.5, 6)\,mm.
+The point of contact on the p-side can be seen at the coordinate (6, 4.5)\,mm.
 Since the absorption length of the light used in the measurements is greater than the sensor thickness, several features of the surface below the sensor can be seen in the figure.
 The square mesa structure and the conductive paint used to glue the detector to the PCB used for the measurements can be seen as areas of increased amplitude and signal integral due to their reflection of the light toward the sensor.
 The PCB has a hole below the detector centre, that results in decreased values of amplitude and signal integral.
@@ -608,7 +610,7 @@ The MCP PMT is used to define the origin of the time axis.
 The dependence of the signal amplitude on the muons' impact position along the $x$ axis is shown in figure\,\ref{fig:ampli8x8impact}.
 The figure shows the average amplitude obtained at different positions on the detector.
 No threshold was applied to the MCP PMT signal for this measurement.
-The amplitude shows small variations within the detector active area and falls within $\approx$200 $\mu$m from the detector edges ($\approx$4.5mm from the centre).
+The amplitude shows small variations within the detector active area and falls within $\approx$200 $\mu$m from the detector edges ($\approx$4.5\,mm from the centre).
 The same result is obtained for the $y$ axis.
 \begin{figure}
   \centering
