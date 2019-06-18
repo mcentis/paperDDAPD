@@ -123,7 +123,6 @@ A mesa structure, where the n-type silicon forms a plateau that is joined to the
 Deep diffused APDs get their name from the process used to produce a pn-junction several tens of microns from the detector surface.
 The APDs used in this work are produced on silicon using the method explained in\,\cite{mcclish2004,apdPatent}.
 Grooves are carved on both sides of an n-doped silicon wafer and p-type dopants are diffused into the silicon.
-The n-doping is achieved through neutron transmutation doping, while the p-type dopants are aluminium and gallium.
 The grooves run parallel to the future die edges and shape the distribution of the p-type dopants into the silicon.
 This process results in an n-doped region enclosed by the p-doped silicon.
 The wafer is ground and polished on both sides.
@@ -140,7 +139,7 @@ Finally, polyimide is deposited around the mesa structure and the wafer is diced
 %  \subfloat{\includegraphics[width = 0.8 \columnwidth]{apdSectionNew}}
   \subfloat{\includegraphics[width = 0.3 \columnwidth, trim=0.3cm 0.3cm 0.2cm 0.3cm, clip]{APD_Diagram}}\\
   \subfloat{\includegraphics[width = 0.4 \columnwidth]{apdSectionNew}}
-  \caption{Schematic cross-sections of a deep diffused APD. {\bf Top:} centre of the detector. The thickness of the depleted region corresponds to a bias voltage of 1.8\,kV. {\bf Bottom:} detector edge.}
+  \caption{Schematic cross-sections of a deep diffused APD. {\bf Top:} centre of the detector. The thickness of the depleted region corresponds to a bias voltage of 1.8\,kV. {\bf Bottom:} detector edge (colour online).}
   \label{fig:apdDia}
 \end{figure}
 
@@ -219,7 +218,8 @@ In this paper detectors with both DC- and AC-coupled readout are characterised, 
 The gain of $8 \times 8$ mm$^2$ APDs was measured using a pulsed LED.
 The LED had a wavelength of 425\,nm and the pulses had a duration of 20\,ns.
 The APD was uniformly illuminated during the measurements.
-The APD signal was shaped, and the measured pulse height used for the determination of the gain.
+The readout chain consisted of a charge sensitive amplifier followed by a shaper with a 0.25\,$\mu$s time constant.
+The signal was digitised using an oscilloscope, and the measured pulse height used for the determination of the gain.
 Unity gain refers to the amplitude obtained at $\approx$500 V bias, where the amplitude shows a weak dependence on the bias voltage~$U$.
 The measurements were performed at different temperatures, and the results are reported in figure\,\ref{fig:gainVsV}.
 An attempt was made to parametrize the  voltage~$U$ required for a given gain as a function of temperature~$T$.
@@ -231,9 +231,9 @@ It should be noted that this particular definition of gain, as it applies to vis
 
 \begin{figure*}[h]
   \centering
-  \subfloat{\includegraphics[width = 0.53 \textwidth]{gainVsV}}
+  \subfloat{\includegraphics[angle = -90, width = 0.51 \textwidth]{gainVsV}}
   \hfill
-  \subfloat{\includegraphics[width = 0.47 \textwidth]{gainVsVscaled}}
+  \subfloat{\includegraphics[angle = -90, width = 0.49 \textwidth]{gainVsVscaled}}
   \caption{\textbf{Left:} Gain of a $8 \times 8$ mm$^2$ APDs as a function of bias voltage at different temperatures. The measurement was performed using a blue LED. \textbf{Right:} By shifting the bias for each curve according to the law described in the text, a scaling law is found.}
   \label{fig:gainVsV}
 \end{figure*}
@@ -297,7 +297,7 @@ For the measurements of intensity as a function of bias voltage and the timing m
 \begin{figure}
   \centering
   \includegraphics[width = 0.6 \columnwidth]{IVnIrrad}
-  \caption{Current-voltage characteristics of the $2 \times 2$~mm$^2$ APDs measured at $-20^\circ$C for different neutron fluences.}
+  \caption{Current-voltage characteristics of the $2 \times 2$~mm$^2$ APDs measured at $-20^\circ$C for different neutron fluences (colour online).}
   \label{fig:iv2x2}
 \end{figure}
 
@@ -327,7 +327,7 @@ This also applies to the amplitude measurements presented below.
   \subfloat[$\Phi_{eq} = 6 \cdot 10^{13}$\,cm$^{-2}$, 1673\,V]{\includegraphics[width = 0.45 \textwidth]{APD_2B_5_IR_XY_peak_scan_m20C_6E13}}\\
   \subfloat[$\Phi_{eq} = 3 \cdot 10^{14}$\,cm$^{-2}$, 1677\,V]{\includegraphics[width = 0.45 \textwidth]{APD_2B_4_IR_XY_peak_scan_m20C_3E14}}\hfill
   \subfloat[$\Phi_{eq} = 10^{15}$\,cm$^{-2}$, 1644\,V]{\includegraphics[width = 0.45 \textwidth]{APD_2B_9_IR_XY_peak_scan_m20C_1E15}}
-  \caption{Signal amplitude as a function of the $x-y$ position where the laser was focused on the sensors measured at $-20^\circ$C. The laser intensity corresponds to 15\,MIPs. An amplification of 10\,dB was used.}
+  \caption{Signal amplitude as a function of the $x-y$ position where the laser was focused on the sensors measured at $-20^\circ$C. The laser intensity corresponds to 15\,MIPs. An amplification of 10\,dB was used (colour online).}
   \label{fig:xyScanIR_2x2}
 \end{figure*}
 
@@ -356,7 +356,7 @@ The measurements shown in the rest of this section were performed by shining the
 \begin{figure}
   \centering
   \includegraphics[width = 0.6 \columnwidth]{ampliIrrad_5mV}
-  \caption{Amplitude of the APDs signal as a function of bias voltage and fluence measured at $-20^\circ$C. The laser intensity corresponds to 15\,MIPs. An amplification of 10\,dB was used.}
+  \caption{Amplitude of the APDs signal as a function of bias voltage and fluence measured at $-20^\circ$C. The laser intensity corresponds to 15\,MIPs. An amplification of 10\,dB was used (colour online).}
   \label{fig:ampli2x2_15MIP}
 \end{figure}
 
@@ -506,7 +506,7 @@ The dependency of the signal amplitude on the detector position can result in a 
   \subfloat[Integrated signal]{\includegraphics[width = 0.45 \textwidth]{chargeMap8x8fine}}\\
   \subfloat[Ratio]{\includegraphics[width = 0.45 \textwidth]{ratioPeakChargeMap8x8fine}}\hfill
   \subfloat[Ratio vs distance]{\includegraphics[width = 0.45 \textwidth]{ratioPeakChargeDistance}}\\
-  \caption{Signal amplitude {\bf (a)}, integral {\bf (b)}, and ratio between amplitude and integral {\bf (c)} of a $8 \times 8$~mm$^2$ APD as a function of the $x-y$ impact point of the laser beam on the sensor. {\bf (d)} Ratio between amplitude and integral as a function of distance from the electrical contact of the sensor. The sensor was biased at 1700\,V, at a temperature of $-20^\circ$C. The laser intensity corresponds to 15 MIPs. An amplification of 10\,dB was used.}
+  \caption{Signal amplitude {\bf (a)}, integral {\bf (b)}, and ratio between amplitude and integral {\bf (c)} of a $8 \times 8$~mm$^2$ APD as a function of the $x-y$ impact point of the laser beam on the sensor. {\bf (d)} Ratio between amplitude and integral as a function of distance from the electrical contact of the sensor. The sensor was biased at 1700\,V, at a temperature of $-20^\circ$C. The laser intensity corresponds to 15 MIPs. An amplification of 10\,dB was used (colour online).}
   \label{fig:8x8unif_noMetal}
 \end{figure*}
 
@@ -576,7 +576,7 @@ This instability influenced the choice of values of bias voltage used in this se
 
 AC-coupled mesh readout $8 \times 8$~mm$^2$ APDs were characterised in terms of their uniformity of response using a 150 GeV muon beam in the H4 beam line at the CERN SPS\,\cite{h4page}.
 For the measurements described below a fast transimpedance amplifier with roughly 10\,$\Omega$ effective input impedance was used\,\cite{whiteACES2014}.
-The bandwidth of the amplifier was 1 GHz.
+The bandwidth of the amplifier was 1\,GHz.
 The measurements were carried out within the infrastructure of PICOSEC\,\cite{bortfeld2018}.
 In particular, the PICOSEC setup provided particle tracking with a resolution of 40\,$\mu$m and a time reference based on a Hamamatsu MCP PMT\footnote{Micro Channel Plate Photomultiplier. The model used was R3809U-50.} which detected charged particles by the Cerenkov light produced in the quartz entrance window providing a reference time jitter of $<10$\,picoseconds\,\cite{sohl2018}.
 The reference frame used in the beam test was right handed, with the beam parallel to the $z$ axis, and the particles moving from positive to negative $z$ values.
@@ -602,7 +602,7 @@ Figure\,\ref{fig:toa8x8impact} shows the time of arrival of the particles as mea
 The MCP PMT is used to define the origin of the time axis.
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \columnwidth]{toa8x8VsImpact}
+  \includegraphics[angle = -90, width = 0.6 \columnwidth]{toa8x8VsImpact}
   \caption{Average time of arrival as a function of impact position for a mesh readout $8 \times 8$~mm$^2$ APD. The measurement was performed using 150 GeV muons. The MCP PMT defines the origin of the time axis. The APD was operated at 1750\,V.}
   \label{fig:toa8x8impact}
 \end{figure}
