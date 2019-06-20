@@ -197,7 +197,8 @@ Two methods were used to improve the uniformity of response.
 The first one relies on an AC-coupled readout of the p-side of the detector.
 A gold layer is applied to the n-side of the detector to improve its conductivity.
 The electrical contact to the p-side is achieved through the formation of a bond-pad and wire-bonding.
-The p-side is covered by a Kapton layer and a metallic mesh is placed above the Kapton.
+The p-side is covered by a 50\,$\mu$m thick Kapton layer and a metallic mesh is placed above the Kapton.
+The capacitance between the mesh and the APD is about 50\,pF.
 The mesh picks-up the signal and provides an electrical path with a resistivity lower than the one of the conductive layer.
 The sensors produced with this configuration were usually placed on PCBs containing the readout electronics.
 These detectors are usually operated by applying the high voltage to the p-side and keeping the n-side at ground potential.
@@ -601,6 +602,10 @@ The rise time is independent of the charged particle impact point.
   \caption{Mean 20-to-80\% rise time as a function of impact position for a mesh readout $8 \times 8$~mm$^2$ APD. The measurement was performed using 150 GeV muons. The APD was operated at 1750\,V.}
   \label{fig:risetime8x8impact}
 \end{figure}
+
+To better show the behaviour of the rise time as a function of position, the data from particles traversing the APD was projected on the $x$ and $y$ axes.
+This increases the statistics present in each bin along the axis.
+This approach is used also in the following figures of this section.
 
 Figure\,\ref{fig:toa8x8impact} shows the time of arrival of the particles as measured by the mesh readout APD as a function of the impact position.
 The MCP PMT is used to define the origin of the time axis.
