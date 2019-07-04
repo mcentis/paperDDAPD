@@ -53,7 +53,7 @@ The high luminosity upgrade of the CERN Large Hadron Collider (HL-LHC) will resu
 In order to reduce the impact of pile-up on physics analyses the ATLAS and CMS experiments are planning to use the timing of the reconstructed objects within one event.
 The primary proton-proton collisions have an RMS spread of $\approx$170~ps within one bunch crossing, and a time resolution of around 30\,ps is required for pile-up mitigation.
 This performance requires dedicated detectors for the determination of the time of the minimum ionising particle tracks.
-The timing detectors will be subjected, for the goal integrated luminosity of 3000~fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions of the CMS detector, respectively.
+The timing detectors will be subjected, for the target integrated luminosity of 3000~fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions of the CMS detector, respectively.
 
 In this paper, deep diffused Avalanche Photo Diodes (APDs) are examined as candidate timing detectors for HL-LHC applications.
 
@@ -64,6 +64,11 @@ The effects of radiation damage on current, signal amplitude, noise, and timing 
 These detectors were irradiated with neutrons up to $\Phi_{eq} = 10^{15}$\,cm$^{-2}$.
 Their timing performance was characterised using a pulsed infrared laser.
 
+While the large signal to noise ratio and fast rise time obtained with devices of the order $\approx 0.5$~cm$^2$ area make these devices attractive for application in regions of lower occupancy (i.e.\ central as opposed to end-cap of the LHC collider experiments), the present study only demonstrates that gain loss can be compensated by increased detector bias up to fluences of $\Phi_{eq} = 6 \cdot 10^{13}$\,cm$^{-2}$.
+So it possibly falls short of the $\Phi_{eq} = 10^{14}$\,cm$^{-2}$ requirement for the CMS barrel over the lifetime of the HL-LHC.
+
+%% The large signal to noise ratio and fast rise time obtained with devices of the order $\approx 0.5$~cm$^2$ area make these devices attractive for applications in regions of lower occupancy, like the barrel region of the CMS experiment.
+%% However, the present study only demonstrates that gain loss can be compensated by increased detector bias up to fluences of $\Phi_{eq} = 6 \cdot 10^{13}$\,cm$^{-2}$, possibly falling short of the $\Phi_{eq} = 10^{14}$\,cm$^{-2}$ requirement for the CMS barrel over the lifetime of the HL-LHC.
 
 \end{abstract}
 
@@ -232,9 +237,9 @@ It should be noted that this particular definition of gain, as it applies to vis
 
 \begin{figure*}[h]
   \centering
-  \subfloat{\includegraphics[angle = -90, width = 0.51 \textwidth]{gainVsV}}
+  \subfloat{\includegraphics[width = 0.52 \textwidth]{gainVsV}}
   \hfill
-  \subfloat{\includegraphics[width = 0.49 \textwidth]{gainVsVscaled}}
+  \subfloat{\includegraphics[width = 0.48 \textwidth]{gainVsVscaled}}
   \caption{\textbf{Left:} Gain of a $8 \times 8$ mm$^2$ APDs as a function of bias voltage at different temperatures. The measurement was performed using a blue LED. \textbf{Right:} By shifting the bias for each curve according to the law described in the text, a scaling law is found.}
   \label{fig:gainVsV}
 \end{figure*}
@@ -264,9 +269,9 @@ The light pulses are propagated from the laser to the sensor through an optical 
 A coupler diverts part of the light to a photodiode that is used to monitor the intensity of the light pulses.
 The relation between the photodiode response and the amount of charge produced by the light pulses was determined using the pad diode measurements mentioned above.
 An optical system focuses the light on the sensor, producing a beam spot with a full width half maximum of about 35\,$\mu$m as measured on the sensor surface using a knife-edge technique.
-The sensor is mounted on a 3 axis linear stage system that allows to move the sensor with respect to the laser focusing system.
+The sensor is mounted on a 3 axis linear stage system enabling movement of the sensor with respect to the laser focusing system.
 The bias voltage of the sensor under test is provided by a voltage source containing a picoammeter used to monitor the current flowing through the sensor.
-The temperature of the APD was controlled using a cooling system constituted by a Peltier element and a chiller.
+The temperature of the APD was controlled using a cooling system consisting of a Peltier element and a chiller.
 The temperature measured by the temperature sensor on the PCB was used as input to the Peltier control system.
 The APD was housed in a light-tight Faraday cage flushed with dry air during the measurements.
 The APD signal was amplified using a CIVIDEC C2HV broadband amplifier\,\cite{cividec}.
@@ -283,7 +288,7 @@ No averaging was applied to the waveforms.
 A gain of 40\,dB provides a better signal to noise ratio for the APD signal, compared to the 10\,dB used for the amplitude measurement.
 The intensity of the light shone on the APDs for these measurements corresponded to 0.8\,MIPs.
 The optical system was modified for the timing measurements.
-A splitter and delay line system was introduced, allowing to shine two light pulses on the sensor for each pulse generated by the laser.
+A splitter and delay line system was introduced, thereby projecting two light pulses on the sensor for each pulse generated by the laser.
 The system is realised using optical fibre, and consisted of a splitter, a short and a long optical fibre branch, and a merger.
 The difference in length between the two branches corresponds to a delay of 50\,ns between the pulses.
 The sensor's signals from the light pulses were digitised in the same waveform in the oscilloscope.
@@ -405,7 +410,7 @@ The time resolution of the sensor irradiated to $\Phi_{eq} = 3 \cdot 10^{14}$\,c
 The noise is defined as the standard deviation of the distribution of the waveform points around the baseline, for a 5\,ns portion of the waveform preceding the pulse due to laser illumination.
 The noise of the APDs, as a function of bias voltage and irradiation fluence, is shown in figure\,\ref{fig:noise2x2}.
 The sharp increases in the noise of the sensors irradiated to $3$ and $6 \cdot 10^{13}$\,cm$^{-2}$ between 1700 and 1750\,V are the result of the automatic adjustment of the oscilloscope vertical scale to accommodate the increase of signal amplitude with voltage.
-The increase in the vertical scale of the oscilloscope results in an increase of the measured noise.
+The increase in the vertical scale of the oscilloscope results in an increase of the measured noise (i.e.\ since the least count of the measuring system contributes digital noise).
 A similar effect can be seen for the non-irradiated sensor around 1650\,V.
 Even accounting for the effects of the oscilloscope scale adjustment, the noise of the APDs with $\Phi_{eq} \leq 6 \cdot 10^{13}$\,cm$^{-2}$ shows a stronger dependence on the applied bias voltage than the the detector irradiated to $\Phi_{eq} = 10^{15}$\,cm$^{-2}$.
 This suggests that the multiplication mechanism affects the noise of the sensors.
@@ -418,7 +423,7 @@ This suggests that the multiplication mechanism affects the noise of the sensors
 \end{figure}
 
 The signal to noise ratio (SNR) is defined as the ratio between amplitude and noise and is shown in figure\,\ref{fig:snr2x2}.
-The SNR is not a monotone function of the applied bias voltage.
+The SNR is not a monotonic function of the applied bias voltage.
 This is the result of the adjustments of the oscilloscope vertical scale discussed above.
 In contrast to the other sensors, the sensor irradiated to $\Phi_{eq} = 10^{15}$\,cm$^{-2}$ shows no dependence of SNR on bias voltage.
 This is attributed to the lower value of gain of this sensor compared to the others.
@@ -497,7 +502,7 @@ The sensor was electrically connected using opaque conductive paint.
 The point of contact on the p-side can be seen at the coordinate (6, 4.5)\,mm.
 Since the absorption length of the light used in the measurements is greater than the sensor thickness, several features of the surface below the sensor can be seen in the figure.
 The square mesa structure and the conductive paint used to glue the detector to the PCB used for the measurements can be seen as areas of increased amplitude and signal integral due to their reflection of the light toward the sensor.
-The PCB has a hole below the detector centre, that results in decreased values of amplitude and signal integral.
+The PCB has a hole below the detector centre, resulting in decreased values of amplitude and signal integral.
 Since the signal amplitude is affected by both the deposited charge in the detector and the detector properties, the amplitude was normalised using the integrated signal in order to mitigate the former effect.
 The ratio between the amplitude and the integrated signal is shown in figure\,\ref{fig:8x8unif_noMetal}.
 The effects of the surface below the sensor are reduced and a dependency of the ratio between amplitude and charge on the distance between the laser spot and the point where the signal is collected from the sensor is shown.
