@@ -584,9 +584,13 @@ This instability influenced the choice of values of bias voltage used in this se
 \section{Beam Tests of $8 \times 8$~mm$^2$ APDs with AC-coupled Readout}
 \label{sec:tb8x8}
 
+The performance of AC-coupled mesh APDs was characterised in two beam tests.
+One of the beam tests focused on the measurement of the uniformity of response of the APD, enabled by the presence of a beam telescope.
+The focus of the second beam test was the measurement of the AC-coupled mesh APDs' time resolution, enabled by a time reference detector (MCP-PMT\footnote{Micro Channel Plate Photomultiplier.}) covering the full area of the APD.
+
 \paragraph{Uniformity of response}
 AC-coupled mesh readout $8 \times 8$~mm$^2$ APDs were characterised in terms of their uniformity of response using a 150\,GeV muon beam in the H4 beam line at the CERN SPS\,\cite{h4page}.
-For these measurements, a fast transimpedance amplifier with roughly 10\,$\Omega$ effective input impedance was used\,\cite{whiteACES2014}.
+For these measurements, a fast transimpedance amplifier with $\approx 10$\,$\Omega$ effective input impedance was used\,\cite{whiteACES2014}.
 The amplifier used for the uniformity measurements was realised using discrete components, and its bandwidth was 1\,GHz.
 The APD and amplifier were operated at room temperature ($\approx20^\circ$C) during the measurements, the APD bias voltage was 1750\,V.
 A 2.5\,GHz 20\,GSa/s oscilloscope was used to digitise the waveforms.
@@ -617,19 +621,19 @@ The rise time is uniform over the detector's active area, and its values do not 
 \end{figure*}
 
 \paragraph{Time resolution}
-The time resolution measurements for AC-coupled mesh readout $8 \times 8$~mm$^2$ APDs were performed using a 140\,GeV proton  beam at the Fermilab test beam facility\,\cite{ftbfPage}.
+The time resolution measurements for AC-coupled mesh readout $8 \times 8$~mm$^2$ APDs were performed using a 120\,GeV proton  beam at the Fermilab test beam facility\,\cite{ftbfPage}.
 The proton beam illuminated the whole active area of the APD, that was operated close to room temperature, at a bias of 1800\,V.
-The setup consisted of an MCP-PMT\footnote{Micro Channel Plate Photomultiplier. \textcolor{red}{MODEL??}} used as trigger and time reference, and the APD.
+The setup consisted of an MCP-PMT\footnote{The model used was Hamamatsu R3809U-50.} used as trigger and time reference, and the APD.
 The particles are detected by the MCP-PMT as they emit Cherenkov light in its quartz window.
-The signal from the mesh APD was amplified by an ASIC\,\cite{whiteACES2014} with a gain of 5\,mv/fC.
+The signal from the mesh APD was amplified by an ASIC\,\cite{whiteACES2014} with a gain of 5\,mV/fC.
 The ASIC provides a differential output of the amplified signal.
 The signals were digitised using a 2.5\,GHz 10\,GSa/s oscilloscope triggered using the MCP-PMT signal.
 As the leading edge of the MCP-PMT signal contained too few points for being directly used as a time reference, the measurement of time difference ($\Delta t$) is done with respect to the oscilloscope trigger.
 The time walk effect due to the varying amplitude of the MCP-PMT signal was corrected in the offline analysis.
 The mesh APD signal used in the analysis is obtained by combining the digitised differential outputs of the ASIC amplifier.
-As a phase difference of about 50\,ps is present between the differential signals, their combination effectively improved the sampling of the APD signal.
+As a phase difference of about 50\,ps is present between the differential signals, their combination effectively improved the sampling of the APD signal to 20\,GSa/s.
 The events with an amplitude larger than 40\,mV were used in the analysis, while the MIP peak was 55\,mV.
-To reduce the influence of the noise on the APD signal, a digital filter with a bandwidth of 500\,MHz was applied to the signal.
+To reduce the influence of the noise on the APD signal, a 500\,MHz digital low-pass filter was applied to the signal.
 A power law was then fitted to the signal's leading edge.
 The fit function, together with the amplitude information, are then put as input to a CFD algorithm.
 The threshold used in the analysis is 0.2.
@@ -641,7 +645,7 @@ The time resolution of the system mesh APD MCP-PMT is found to be $27 \pm 1$\,ps
 \begin{figure}
   \centering
   \includegraphics[width = 0.6 \columnwidth]{dtDistr8x8asicTB}
-  \caption{Distribution of the time difference between the MCP-PMT trigger signal and the mesh APD. The distribution is described using the sum of a Gauss function with a constant offset. The measurement was performed using 140\,GeV protons. The APD was operated at 1800\,V (colour online).}
+  \caption{Distribution of the time difference between the MCP-PMT trigger signal and the mesh APD. The distribution is described using the sum of a Gauss function with a constant offset. The measurement was performed using 120\,GeV protons. The APD was operated at 1800\,V.}
   \label{fig:dtDistrTB}
 \end{figure}
 
@@ -740,10 +744,8 @@ The AC-coupled mesh readout of $8 \times 8$\,mm$^2$ APDs resulted in an excellen
 This readout relies on the mesh providing a low impedance path for the signal induced by the charge carriers motion within the silicon.
 The rise time and signal amplitude do not show a significant dependence on the impact position of the particles on the sensor.
 The mesh readout also reduces the capacitance seen by the amplifier, enabling development of fast low noise signal processing front end, which will be discussed elsewhere.
-\textcolor{red}{
-  The time resolution of the mesh APD was determined in a dedicated beam test.
-  Using a proton beam that fully illuminated the active area of the detector, a time resolution of about 27\,ps was measured for a 1800\,V bias.
-}
+The time resolution of the mesh APD was determined in a dedicated beam test.
+Using a proton beam that fully illuminated the active area of the detector, a time resolution of $27 \pm 1$\,ps was measured for a 1800\,V bias.
 
 Deep diffused APDs were characterised for response uniformity and timing performance in laboratory and test beam studies, before and after irradiation.
 An extensive set of results is presented.
