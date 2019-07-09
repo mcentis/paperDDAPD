@@ -584,69 +584,127 @@ This instability influenced the choice of values of bias voltage used in this se
 \section{Beam Tests of $8 \times 8$~mm$^2$ APDs with AC-coupled Readout}
 \label{sec:tb8x8}
 
-
-
-%% \begin{figure*}[h]
-%%   \centering
-%%   \subfloat[]{\includegraphics[width = 0.49 \textwidth]{APD_2B_3_APD_2B_3_maps_UNIRRAD_ROOT6_peak_signal_map_V1700V_IR_front}}\\
-%%   \subfloat[]{\includegraphics[width = 0.49 \textwidth]{APD_2B_3_APD_2B_3_maps_3E13_ROOT6_peak_signal_map_V1700V_IR_front}}\hfill
-%%   \subfloat[]{\includegraphics[width = 0.49 \textwidth]{APD_2B_5_APD_2B_5_maps_6E13_ROOT6_peak_signal_map_V1700V_IR_front}}\\
-%%   \subfloat[]{\includegraphics[width = 0.49 \textwidth]{APD_2B_4_APD_2B_4_maps_3E14_ROOT6_peak_signal_map_V1700V_IR_front}}\hfill
-%%   \subfloat[]{\includegraphics[width = 0.49 \textwidth]{APD_2B_9_APD_2B_9_maps_1E15_ROOT6_peak_signal_map_V1700V_IR_front}}
-%%   \caption{ (colour online).}
-%%   \label{fig:uniformityRiseTimeAmpli}
-%% \end{figure*}
-
-
-
-AC-coupled mesh readout $8 \times 8$~mm$^2$ APDs were characterised in terms of their uniformity of response using a 150 GeV muon beam in the H4 beam line at the CERN SPS\,\cite{h4page}.
-For the measurements described below a fast transimpedance amplifier with roughly 10\,$\Omega$ effective input impedance was used\,\cite{whiteACES2014}.
-The bandwidth of the amplifier was 1\,GHz.
+\paragraph{Uniformity of response}
+AC-coupled mesh readout $8 \times 8$~mm$^2$ APDs were characterised in terms of their uniformity of response using a 150\,GeV muon beam in the H4 beam line at the CERN SPS\,\cite{h4page}.
+For these measurements, a fast transimpedance amplifier with roughly 10\,$\Omega$ effective input impedance was used\,\cite{whiteACES2014}.
+The amplifier used for the uniformity measurements was realised using discrete components, and its bandwidth was 1\,GHz.
+The APD and amplifier were operated at room temperature ($\approx20^\circ$C) during the measurements, the APD bias voltage was 1750\,V.
+A 2.5\,GHz 20\,GSa/s oscilloscope was used to digitise the waveforms.
 The measurements were carried out within the infrastructure of PICOSEC\,\cite{bortfeld2018}.
-In particular, the PICOSEC setup provided particle tracking with a resolution of 40\,$\mu$m and a time reference based on a Hamamatsu MCP PMT\footnote{Micro Channel Plate Photomultiplier. The model used was R3809U-50.} which detected charged particles by the Cerenkov light produced in the quartz entrance window providing a reference time jitter of $<10$\,picoseconds\,\cite{sohl2018}.
+In particular, the PICOSEC setup provided particle tracking with a resolution of 40\,$\mu$m.
 The reference frame used in the beam test was right handed, with the beam parallel to the $z$ axis, and the particles moving from positive to negative $z$ values.
 The $x$ and $y$ axes were horizontal and vertical, respectively, their origin corresponds with the centre of the APD.
 
-Using the above setup and a 2.5\,GHz 20\,GSa/s digital oscilloscope to record the waveforms the timing measurements of the mesh readout APDs were derived using a 20\% constant fraction algorithm to define the signal arrival time.
-To ensure the consistency of this timing measurement the dependence of the waveform characteristics and in particular the rise time dependence on the impact position of the muons was studied using the H4 beam data.
-For this particular study a sample of $\approx$1000 events were recorded with the sensor operated at a bias voltage of 1750~V resulting in a most probable amplitude (MIP peak) of 65~mV at the oscilloscope input.
-The APD and amplifier were operated at room temperature ($\approx20^\circ$C) during the measurements.
+The results of the uniformity study are shown in figure\,\ref{fig:uniformityRiseTimeAmpliTB}.
+Figure\,\ref{fig:ampli8x8distrTB} shows the amplitude distribution of the APD signal for the data used in the uniformity study.
+The most probable value (MIP peak) is 65\,mV at the oscilloscope input, for the 1750\,V bias applied to the sensor.
+The average amplitude as a function of the particles impact position on the APD is shown in figure\,\ref{fig:ampli8x8mapTB}.
+The amplitude is uniform over the detector's active area.
+The normalised signal of a typical event is shown in figure\,\ref{fig:riseTime8x8TB}.
+Figure\,\ref{fig:riseTime8x8TB} also depicts the definition of 20-to-80\% rise time used in this section.
+The average rise time as a function of the particles impact position is shown in figure\,\ref{fig:riseTime8x8mapTB}.
+The values of each bin shown in figure\,\ref{fig:riseTime8x8mapTB} lie within $\pm8.5$\% of the overall average rise time of 600\,ps.
+The rise time is uniform over the detector's active area, and its values do not show any particular trend.
 
-A threshold of 40\,mV was applied to the MCP PMT signal to ensure an accurate reference time information for the time of arrival and rise time measurements.
-The typical pulse rise time (measured at 20-80\% levels) was 630~ps with an RMS spread of $\approx$160~ps.
-Figure\,\ref{fig:risetime8x8impact} shows the average rise time as a function of the impact position of the particles along the $x$ and $y$ directions.
-The rise time is independent of the charged particle impact point.
+\begin{figure*}[h]
+  \centering
+  \subfloat[Amplitude distribution]{\includegraphics[width = 0.49 \textwidth]{ampli8x8distrTB_modified}\label{fig:ampli8x8distrTB}}\hfill
+  \subfloat[Rise time definition]{\includegraphics[width = 0.49 \textwidth]{riseTime8x8pulseTB_modified}\label{fig:riseTime8x8TB}}\\
+  \subfloat[Mean amplitude]{\includegraphics[width = 0.49 \textwidth]{ampli8x8mapTB}\label{fig:ampli8x8mapTB}}\hfill
+  \subfloat[Mean rise time]{\includegraphics[width = 0.49 \textwidth]{riseTime8x8mapTB}\label{fig:riseTime8x8mapTB}}
+  \caption{Amplitude distribution \textbf{(a)} of the AC-coupled mesh readout APD at the beam test. Normalised signal of a typical event and definition of the 20-to-80\% rise time \textbf{(b)}. Mean amplitude \textbf{(c)} and rise time \textbf{(d)} as a function of the particles impact position. The APD was biased to 1750\,V and kept close to room temperature. The measurements were performed using 150\,GeV muons (colour online).}
+  \label{fig:uniformityRiseTimeAmpliTB}
+\end{figure*}
+
+\paragraph{Time resolution}
+The time resolution measurements for AC-coupled mesh readout $8 \times 8$~mm$^2$ APDs were performed using a 140\,GeV proton  beam at the Fermilab test beam facility\,\cite{ftbfPage}.
+The proton beam illuminated the whole active area of the APD, that was operated close to room temperature, at a bias of 1800\,V.
+The setup consisted of an MCP-PMT\footnote{Micro Channel Plate Photomultiplier. \textcolor{red}{MODEL??}} used as trigger and time reference, and the APD.
+The particles are detected by the MCP-PMT as they emit Cherenkov light in its quartz window.
+The signal from the mesh APD was amplified by an ASIC\,\cite{whiteACES2014} with a gain of 5\,mv/fC.
+The ASIC provides a differential output of the amplified signal.
+The signals were digitised using a 2.5\,GHz 10\,GSa/s oscilloscope triggered using the MCP-PMT signal.
+As the leading edge of the MCP-PMT signal contained too few points for being directly used as a time reference, the measurement of time difference ($\Delta t$) is done with respect to the oscilloscope trigger.
+The time walk effect due to the varying amplitude of the MCP-PMT signal was corrected in the offline analysis.
+The mesh APD signal used in the analysis is obtained by combining the digitised differential outputs of the ASIC amplifier.
+As a phase difference of about 50\,ps is present between the differential signals, their combination effectively improved the sampling of the APD signal.
+The events with an amplitude larger than 40\,mV were used in the analysis, while the MIP peak was 55\,mV.
+To reduce the influence of the noise on the APD signal, a digital filter with a bandwidth of 500\,MHz was applied to the signal.
+A power law was then fitted to the signal's leading edge.
+The fit function, together with the amplitude information, are then put as input to a CFD algorithm.
+The threshold used in the analysis is 0.2.
+The distribution of the time difference obtained with this analysis is shown in figure\,\ref{fig:dtDistrTB}.
+The distribution is described using a Gauss function summed to a constant offset.
+The use of the offset parameter improves the description of the data.
+The time resolution of the system mesh APD MCP-PMT is found to be $27 \pm 1$\,ps.
+
 \begin{figure}
   \centering
-  \includegraphics[width = 0.6 \columnwidth]{risetime8x8vsImpact}
-  \caption{Mean 20-to-80\% rise time as a function of impact position for a mesh readout $8 \times 8$~mm$^2$ APD. The measurement was performed using 150 GeV muons. The APD was operated at 1750\,V.}
-  \label{fig:risetime8x8impact}
+  \includegraphics[width = 0.6 \columnwidth]{dtDistr8x8asicTB}
+  \caption{Distribution of the time difference between the MCP-PMT trigger signal and the mesh APD. The distribution is described using the sum of a Gauss function with a constant offset. The measurement was performed using 140\,GeV protons. The APD was operated at 1800\,V (colour online).}
+  \label{fig:dtDistrTB}
 \end{figure}
 
-To better show the behaviour of the rise time as a function of position, the data from particles traversing the APD was projected on the $x$ and $y$ axes.
-This increases the statistics present in each bin along the axis.
-This approach is used also in the following figures of this section.
 
-Figure\,\ref{fig:toa8x8impact} shows the time of arrival of the particles as measured by the mesh readout APD as a function of the impact position.
-The MCP PMT is used to define the origin of the time axis.
-\begin{figure}
-  \centering
-  \includegraphics[angle = -90, width = 0.6 \columnwidth]{toa8x8VsImpact}
-  \caption{Average time of arrival as a function of impact position for a mesh readout $8 \times 8$~mm$^2$ APD. The measurement was performed using 150 GeV muons. The MCP PMT defines the origin of the time axis. The APD was operated at 1750\,V.}
-  \label{fig:toa8x8impact}
-\end{figure}
 
-The dependence of the signal amplitude on the muons' impact position along the $x$ axis is shown in figure\,\ref{fig:ampli8x8impact}.
-The figure shows the average amplitude obtained at different positions on the detector.
-No threshold was applied to the MCP PMT signal for this measurement.
-The amplitude shows small variations within the detector active area and falls within $\approx$200 $\mu$m from the detector edges ($\approx$4.5\,mm from the centre).
-The same result is obtained for the $y$ axis.
-\begin{figure}
-  \centering
-  \includegraphics[width = 0.6 \columnwidth]{ampli8x8vsImpact}
-  \caption{Average amplitude as a function of impact position for a mesh readout $8 \times 8$~mm$^2$ APD. The measurement was performed using 150 GeV muons. The APD was operated at 1750\,V.}
-  \label{fig:ampli8x8impact}
-\end{figure}
+%% The measurements presented here utilized 2 variants of fast
+%% transimpedance amplifiers developed in parallel with this project at
+%% University of Pennsylvania. The uniformity studies incorporated an
+%% earlier, discrete version while the time resolution was measured with the
+%% actual 4 channel ASIC using a 180nm Silicon Germanium process. The
+%% latter was operated at a gain of 5mV/fC and achieved a 10-90% risetime
+%% of 300 psec with C_D=10 pF (and 730+/-30 psec with our sensors for
+%% charged particles).
+%% 20-80 risetime asic: 575 ps
+
+%% AC-coupled mesh readout $8 \times 8$~mm$^2$ APDs were characterised in terms of their uniformity of response using a 150 GeV muon beam in the H4 beam line at the CERN SPS\,\cite{h4page}.
+%% For the measurements described below a fast transimpedance amplifier with roughly 10\,$\Omega$ effective input impedance was used\,\cite{whiteACES2014}.
+%% The bandwidth of the amplifier was 1\,GHz.
+%% The measurements were carried out within the infrastructure of PICOSEC\,\cite{bortfeld2018}.
+%% In particular, the PICOSEC setup provided particle tracking with a resolution of 40\,$\mu$m and a time reference based on a Hamamatsu MCP PMT\footnote{Micro Channel Plate Photomultiplier. The model used was R3809U-50.} which detected charged particles by the Cerenkov light produced in the quartz entrance window providing a reference time jitter of $<10$\,picoseconds\,\cite{sohl2018}.
+%% The reference frame used in the beam test was right handed, with the beam parallel to the $z$ axis, and the particles moving from positive to negative $z$ values.
+%% The $x$ and $y$ axes were horizontal and vertical, respectively, their origin corresponds with the centre of the APD.
+
+%% Using the above setup and a 2.5\,GHz 20\,GSa/s digital oscilloscope to record the waveforms the timing measurements of the mesh readout APDs were derived using a 20\% constant fraction algorithm to define the signal arrival time.
+%% To ensure the consistency of this timing measurement the dependence of the waveform characteristics and in particular the rise time dependence on the impact position of the muons was studied using the H4 beam data.
+%% For this particular study a sample of $\approx$1000 events were recorded with the sensor operated at a bias voltage of 1750~V resulting in a most probable amplitude (MIP peak) of 65~mV at the oscilloscope input.
+%% The APD and amplifier were operated at room temperature ($\approx20^\circ$C) during the measurements.
+
+%% A threshold of 40\,mV was applied to the MCP PMT signal to ensure an accurate reference time information for the time of arrival and rise time measurements.
+%% The typical pulse rise time (measured at 20-80\% levels) was 630~ps with an RMS spread of $\approx$160~ps.
+%% Figure\,\ref{fig:risetime8x8impact} shows the average rise time as a function of the impact position of the particles along the $x$ and $y$ directions.
+%% The rise time is independent of the charged particle impact point.
+%% \begin{figure}
+%%   \centering
+%%   \includegraphics[width = 0.6 \columnwidth]{risetime8x8vsImpact}
+%%   \caption{Mean 20-to-80\% rise time as a function of impact position for a mesh readout $8 \times 8$~mm$^2$ APD. The measurement was performed using 150 GeV muons. The APD was operated at 1750\,V.}
+%%   \label{fig:risetime8x8impact}
+%% \end{figure}
+
+%% To better show the behaviour of the rise time as a function of position, the data from particles traversing the APD was projected on the $x$ and $y$ axes.
+%% This increases the statistics present in each bin along the axis.
+%% This approach is used also in the following figures of this section.
+
+%% Figure\,\ref{fig:toa8x8impact} shows the time of arrival of the particles as measured by the mesh readout APD as a function of the impact position.
+%% The MCP PMT is used to define the origin of the time axis.
+%% \begin{figure}
+%%   \centering
+%%   \includegraphics[angle = -90, width = 0.6 \columnwidth]{toa8x8VsImpact}
+%%   \caption{Average time of arrival as a function of impact position for a mesh readout $8 \times 8$~mm$^2$ APD. The measurement was performed using 150 GeV muons. The MCP PMT defines the origin of the time axis. The APD was operated at 1750\,V.}
+%%   \label{fig:toa8x8impact}
+%% \end{figure}
+
+%% The dependence of the signal amplitude on the muons' impact position along the $x$ axis is shown in figure\,\ref{fig:ampli8x8impact}.
+%% The figure shows the average amplitude obtained at different positions on the detector.
+%% No threshold was applied to the MCP PMT signal for this measurement.
+%% The amplitude shows small variations within the detector active area and falls within $\approx$200 $\mu$m from the detector edges ($\approx$4.5\,mm from the centre).
+%% The same result is obtained for the $y$ axis.
+%% \begin{figure}
+%%   \centering
+%%   \includegraphics[width = 0.6 \columnwidth]{ampli8x8vsImpact}
+%%   \caption{Average amplitude as a function of impact position for a mesh readout $8 \times 8$~mm$^2$ APD. The measurement was performed using 150 GeV muons. The APD was operated at 1750\,V.}
+%%   \label{fig:ampli8x8impact}
+%% \end{figure}
 
 \section{Summary}
 \label{sec:summary}
@@ -680,8 +738,12 @@ The origin of these instabilities is under investigation.
 
 The AC-coupled mesh readout of $8 \times 8$\,mm$^2$ APDs resulted in an excellent uniformity of response as studied using a high energy muon beam.
 This readout relies on the mesh providing a low impedance path for the signal induced by the charge carriers motion within the silicon.
-The rise time, signal amplitude, and time of arrival do not show a significant dependence on the impact position of the particles on the sensor.
+The rise time and signal amplitude do not show a significant dependence on the impact position of the particles on the sensor.
 The mesh readout also reduces the capacitance seen by the amplifier, enabling development of fast low noise signal processing front end, which will be discussed elsewhere.
+\textcolor{red}{
+  The time resolution of the mesh APD was determined in a dedicated beam test.
+  Using a proton beam that fully illuminated the active area of the detector, a time resolution of about 27\,ps was measured for a 1800\,V bias.
+}
 
 Deep diffused APDs were characterised for response uniformity and timing performance in laboratory and test beam studies, before and after irradiation.
 An extensive set of results is presented.
