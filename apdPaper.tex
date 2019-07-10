@@ -88,7 +88,7 @@ A sufficiently accurate time measurement effectively reduces the vertex density,
 Since the RMS spread of the primary vertices at HL-LHC is foreseen to be $\approx$ 170~ps within one bunch crossing, a minimum ionising particle (MIP) time resolution of $\approx 30$~ps is necessary to improve the association of the particles to their correct vertex\,\cite{cmsMIPtiming,atlasMIPtiming}.
 
 To reach this performance, dedicated detector systems will be needed and both ATLAS and CMS are planning such upgrades\,\cite{cmsMIPtiming,atlasMIPtiming}.
-The timing detectors will be subjected, for the integrated luminosity goal of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions, respectively.
+The timing detectors will be subjected, for the target integrated luminosity of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions, respectively.
 
 By exploiting the design margins of HL-LHC, it will be possible to achieve an ultimate luminosity of up to $7.5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$ and an ultimate integrated luminosity of 4000\,fb$^{-1}$\,\cite{hlLhcTecDesRep}.
 In this scenario the pile-up and fluence to which the detectors will be exposed will increase proportionally to the instantaneous and integrated luminosity, respectively.
@@ -649,72 +649,11 @@ The time resolution of the system mesh APD MCP-PMT is found to be $27 \pm 1$\,ps
   \label{fig:dtDistrTB}
 \end{figure}
 
-
-
-%% The measurements presented here utilized 2 variants of fast
-%% transimpedance amplifiers developed in parallel with this project at
-%% University of Pennsylvania. The uniformity studies incorporated an
-%% earlier, discrete version while the time resolution was measured with the
-%% actual 4 channel ASIC using a 180nm Silicon Germanium process. The
-%% latter was operated at a gain of 5mV/fC and achieved a 10-90% risetime
-%% of 300 psec with C_D=10 pF (and 730+/-30 psec with our sensors for
-%% charged particles).
-%% 20-80 risetime asic: 575 ps
-
-%% AC-coupled mesh readout $8 \times 8$~mm$^2$ APDs were characterised in terms of their uniformity of response using a 150 GeV muon beam in the H4 beam line at the CERN SPS\,\cite{h4page}.
-%% For the measurements described below a fast transimpedance amplifier with roughly 10\,$\Omega$ effective input impedance was used\,\cite{whiteACES2014}.
-%% The bandwidth of the amplifier was 1\,GHz.
-%% The measurements were carried out within the infrastructure of PICOSEC\,\cite{bortfeld2018}.
-%% In particular, the PICOSEC setup provided particle tracking with a resolution of 40\,$\mu$m and a time reference based on a Hamamatsu MCP PMT\footnote{Micro Channel Plate Photomultiplier. The model used was R3809U-50.} which detected charged particles by the Cerenkov light produced in the quartz entrance window providing a reference time jitter of $<10$\,picoseconds\,\cite{sohl2018}.
-%% The reference frame used in the beam test was right handed, with the beam parallel to the $z$ axis, and the particles moving from positive to negative $z$ values.
-%% The $x$ and $y$ axes were horizontal and vertical, respectively, their origin corresponds with the centre of the APD.
-
-%% Using the above setup and a 2.5\,GHz 20\,GSa/s digital oscilloscope to record the waveforms the timing measurements of the mesh readout APDs were derived using a 20\% constant fraction algorithm to define the signal arrival time.
-%% To ensure the consistency of this timing measurement the dependence of the waveform characteristics and in particular the rise time dependence on the impact position of the muons was studied using the H4 beam data.
-%% For this particular study a sample of $\approx$1000 events were recorded with the sensor operated at a bias voltage of 1750~V resulting in a most probable amplitude (MIP peak) of 65~mV at the oscilloscope input.
-%% The APD and amplifier were operated at room temperature ($\approx20^\circ$C) during the measurements.
-
-%% A threshold of 40\,mV was applied to the MCP PMT signal to ensure an accurate reference time information for the time of arrival and rise time measurements.
-%% The typical pulse rise time (measured at 20-80\% levels) was 630~ps with an RMS spread of $\approx$160~ps.
-%% Figure\,\ref{fig:risetime8x8impact} shows the average rise time as a function of the impact position of the particles along the $x$ and $y$ directions.
-%% The rise time is independent of the charged particle impact point.
-%% \begin{figure}
-%%   \centering
-%%   \includegraphics[width = 0.6 \columnwidth]{risetime8x8vsImpact}
-%%   \caption{Mean 20-to-80\% rise time as a function of impact position for a mesh readout $8 \times 8$~mm$^2$ APD. The measurement was performed using 150 GeV muons. The APD was operated at 1750\,V.}
-%%   \label{fig:risetime8x8impact}
-%% \end{figure}
-
-%% To better show the behaviour of the rise time as a function of position, the data from particles traversing the APD was projected on the $x$ and $y$ axes.
-%% This increases the statistics present in each bin along the axis.
-%% This approach is used also in the following figures of this section.
-
-%% Figure\,\ref{fig:toa8x8impact} shows the time of arrival of the particles as measured by the mesh readout APD as a function of the impact position.
-%% The MCP PMT is used to define the origin of the time axis.
-%% \begin{figure}
-%%   \centering
-%%   \includegraphics[angle = -90, width = 0.6 \columnwidth]{toa8x8VsImpact}
-%%   \caption{Average time of arrival as a function of impact position for a mesh readout $8 \times 8$~mm$^2$ APD. The measurement was performed using 150 GeV muons. The MCP PMT defines the origin of the time axis. The APD was operated at 1750\,V.}
-%%   \label{fig:toa8x8impact}
-%% \end{figure}
-
-%% The dependence of the signal amplitude on the muons' impact position along the $x$ axis is shown in figure\,\ref{fig:ampli8x8impact}.
-%% The figure shows the average amplitude obtained at different positions on the detector.
-%% No threshold was applied to the MCP PMT signal for this measurement.
-%% The amplitude shows small variations within the detector active area and falls within $\approx$200 $\mu$m from the detector edges ($\approx$4.5\,mm from the centre).
-%% The same result is obtained for the $y$ axis.
-%% \begin{figure}
-%%   \centering
-%%   \includegraphics[width = 0.6 \columnwidth]{ampli8x8vsImpact}
-%%   \caption{Average amplitude as a function of impact position for a mesh readout $8 \times 8$~mm$^2$ APD. The measurement was performed using 150 GeV muons. The APD was operated at 1750\,V.}
-%%   \label{fig:ampli8x8impact}
-%% \end{figure}
-
 \section{Summary}
 \label{sec:summary}
 
 For their operation at HL-LHC, the ATLAS and CMS experiments foresee detector upgrades that add timing information of reconstructed charged particles, aiming at a time resolution of around 30\,ps.
-The detectors used in these systems will be exposed to irradiation fluences of up to $\Phi_{eq} = 10^{15}$\,cm$^{-2}$ for the goal integrated luminosity of HL-LHC of 3000\,fb$^{-1}$.
+The detectors used in these systems will be exposed to irradiation fluences of up to $\Phi_{eq} = 10^{15}$\,cm$^{-2}$ for the target integrated luminosity of HL-LHC of 3000\,fb$^{-1}$.
 
 The dependence of the gain of deep diffused APDs on bias voltage and temperature was studied using a pulsed blue LED.
 A scaling law for the gain was found, allowing to determine which change in bias voltage is necessary to maintain the same gain when varying the APD temperature.
