@@ -56,7 +56,7 @@
 %% The timing detectors will be subjected, for the target integrated luminosity of 3000~fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions of the CMS detector, respectively.
 
 Recent interest in pile-up mitigation through fast timing at the HL-LHC has focused attention on technologies that now achieve minimum ionising particle (MIP) time resolution of 30\,picoseconds or less.
-The constraints of technical maturity and radiation tolerance narrowed the options in this rapidly developing field for the ATLAS and CMS upgrades.
+The constraints of technical maturity and radiation tolerance narrowed the options in this rapidly developing field for the ATLAS and CMS upgrades to low gain avalanche detectors and silicon photomultipliers.
 In a variety of applications where occupancies and doses are lower, devices with pixel elements of order 1\,cm$^2$, nevertheless achieving 30\,ps, would be attractive.
   
 In this paper, deep diffused Avalanche Photo Diodes (APDs) are examined as candidate timing detectors for HL-LHC applications.
@@ -87,10 +87,10 @@ The pile-up at HL-LHC will pose a challenge to this method, as a significant fra
 
 A different method to associate the reconstructed objects to separate vertices relies on the measurement of the time of arrival of the particles at the detectors.
 A sufficiently accurate time measurement effectively reduces the vertex density, improving the event reconstruction capability of the experiments.
-Since the RMS spread of the primary vertices at HL-LHC is foreseen to be $\approx$ 170~ps within one bunch crossing, a minimum ionising particle (MIP) time resolution of $\approx 30$~ps is necessary to improve the association of the particles to their correct vertex\,\cite{cmsMIPtiming,atlasMIPtiming}.
+Since the RMS spread of the primary vertices at HL-LHC is foreseen to be $\approx$ 170~ps within one bunch crossing, a minimum ionising particle (MIP) time resolution of $\approx 30$~ps is necessary to improve the association of the particles to their correct vertex, bringing the complexity of reconstruction to the present level\,\cite{cmsMIPtiming,atlasMIPtiming}.
 
 To reach this performance, dedicated detector systems will be needed and both ATLAS and CMS are planning such upgrades\,\cite{cmsMIPtiming,atlasMIPtiming}.
-The timing detectors will be subjected, for the target integrated luminosity of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions, respectively.
+The timing detectors will be subjected, for the target integrated luminosity of 3000 fb$^{-1}$, to radiation levels corresponding to a 1-MeV neutrons fluence ($\Phi_{eq}$) of about $10^{14}$ or a few $10^{15}$\,cm$^{-2}$ for the barrel and end-cap detector regions, respectively.
 
 By exploiting the design margins of HL-LHC, it will be possible to achieve an ultimate luminosity of up to $7.5 \cdot 10^{34}$\,cm$^{-2}$s$^{-1}$ and an ultimate integrated luminosity of 4000\,fb$^{-1}$\,\cite{hlLhcTecDesRep}.
 In this scenario the pile-up and fluence to which the detectors will be exposed will increase proportionally to the instantaneous and integrated luminosity, respectively.
@@ -181,7 +181,7 @@ The n-side of the detector faces the ceramic support.
 The contact between the APD and the metal leads is achieved using conductive glue.
 
 The $2 \times 2$~mm$^2$ APDs have a DC-coupled readout.
-In order to facilitate the handling and electrical connection to the sensors, each APD was mounted on a printed circuit board (PCB) for its characterisation both before and after irradiation.
+In order to facilitate the handling and electrical connection to the sensors, each APD, together with its ceramic support, was mounted on a printed circuit board (PCB) for its characterisation both before and after irradiation.
 The PCB was equipped with a temperature sensor and the connectors needed to link the APD to the measuring devices.
 
 The sensors were irradiated with neutrons at the nuclear reactor of the Jo\v{z}ef Stefan Institute in Ljubljana\,\cite{jsiIrrad}.
@@ -231,17 +231,17 @@ The signal was digitised using an oscilloscope, and the measured pulse height us
 Unity gain refers to the amplitude obtained at $\approx$500 V bias, where the amplitude shows a weak dependence on the bias voltage~$U$.
 The measurements were performed at different temperatures, and the results are reported in figure\,\ref{fig:gainVsV}.
 An attempt was made to parametrize the  voltage~$U$ required for a given gain as a function of temperature~$T$.
-A temperature dependent shift $U' = U -2.45~\textrm{V}/^\circ\textrm{C} \cdot \Delta T( 0^\circ\textrm{C})$ describes the change in voltage necessary to normalise a given value of gain to the gain obtained at $0^\circ\textrm{C}$ when the temperature of the APD is changed.
-Here $\Delta T( 0^\circ\textrm{C})$ gives the temperature difference from $0^\circ\textrm{C}$. 
+A temperature dependent shift $U' = U -2.45~\textrm{V}/^\circ\textrm{C}\cdot (T - T_0)$, with $T_0 = 0^\circ\textrm{C}$, describes the change in voltage necessary to normalise a given value of gain to the gain obtained at $0^\circ\textrm{C}$ when the temperature of the APD is changed.
+%Here $\Delta T( 0^\circ\textrm{C})$ gives the temperature difference from $0^\circ\textrm{C}$. 
 The result of this scaling law is shown in figure \ref{fig:gainVsV}(Right).
 It describes the data up to a gain of $\approx$1000 and may prove useful for discriminating among impact ionisation models that appear in the literature and as options in TCAD\footnote{Technology Computer Aided Design.} software for modelling such devices.
 It should be noted that this particular definition of gain, as it applies to visible light photodetection in an APD, is different from the gain obtained from the response to minimum ionising particles (or the IR laser model used) since, in the former case, all photoelectrons traverse the region where impact ionisation occurs.
 
 \begin{figure*}[h]
   \centering
-  \subfloat{\includegraphics[width = 0.52 \textwidth]{gainVsV}}
+  \subfloat{\includegraphics[width = 0.52 \textwidth, trim=0 0 0 1.95cm, clip]{gainVsV}}
   \hfill
-  \subfloat{\includegraphics[width = 0.48 \textwidth]{gainVsVscaled}}
+  \subfloat{\includegraphics[width = 0.48 \textwidth, trim=0 0 0 2.1cm, clip]{gainVsVscaled}}
   \caption{\textbf{Left:} Gain of a $8 \times 8$ mm$^2$ APDs as a function of bias voltage at different temperatures. The measurement was performed using a blue LED. \textbf{Right:} By shifting the bias for each curve according to the law described in the text, a scaling law is found.}
   \label{fig:gainVsV}
 \end{figure*}
@@ -335,7 +335,7 @@ This also applies to the amplitude measurements presented below.
   \subfloat[$\Phi_{eq} = 6 \cdot 10^{13}$\,cm$^{-2}$, 1673\,V]{\includegraphics[width = 0.49 \textwidth]{APD_2B_5_APD_2B_5_maps_6E13_ROOT6_peak_signal_map_V1700V_IR_front}}\\
   \subfloat[$\Phi_{eq} = 3 \cdot 10^{14}$\,cm$^{-2}$, 1677\,V]{\includegraphics[width = 0.49 \textwidth]{APD_2B_4_APD_2B_4_maps_3E14_ROOT6_peak_signal_map_V1700V_IR_front}}\hfill
   \subfloat[$\Phi_{eq} = 10^{15}$\,cm$^{-2}$, 1644\,V]{\includegraphics[width = 0.49 \textwidth]{APD_2B_9_APD_2B_9_maps_1E15_ROOT6_peak_signal_map_V1700V_IR_front}}
-  \caption{Signal amplitude as a function of the $x-y$ position where the laser was focused on the sensors measured at $-20^\circ$C. The laser intensity corresponds to 15\,MIPs. An amplification of 10\,dB was used (colour online).}
+  \caption{Signal amplitude as a function of the $x-y$ position where the laser was focused on the sensors measured at $-20^\circ$C. The laser intensity corresponds to 15\,MIPs. An amplification of 10\,dB was used. The colour scales were adjusted for each fluence (colour online).}
   \label{fig:xyScanIR_2x2}
 \end{figure*}
 
@@ -681,7 +681,7 @@ The time jitter was found to be 22\,ps at a voltage of 1750\,V.
 The metallised sensors often showed instabilities when biased above 1700\,V.
 The origin of these instabilities is under investigation.
 
-The AC-coupled mesh readout of $8 \times 8$\,mm$^2$ APDs resulted in an excellent uniformity of response as studied using a high energy muon beam.
+The AC-coupled mesh readout of $8 \times 8$\,mm$^2$ APDs resulted in a satisfactory uniformity of response as studied using a high energy muon beam.
 This readout relies on the mesh providing a low impedance path for the signal induced by the charge carriers motion within the silicon.
 The rise time and signal amplitude do not show a significant dependence on the impact position of the particles on the sensor.
 The mesh readout also reduces the capacitance seen by the amplifier, enabling development of fast low noise signal processing front end, which will be discussed elsewhere.
