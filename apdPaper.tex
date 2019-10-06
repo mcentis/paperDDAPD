@@ -627,8 +627,10 @@ The time resolution measurements for AC-coupled mesh readout $8 \times 8$~mm$^2$
 The proton beam illuminated the whole active area of the APD, that was operated close to room temperature, at a bias of 1800\,V.
 The setup consisted of an MCP-PMT\footnote{The model used was Hamamatsu R3809U-50.} used as trigger and time reference, and the APD.
 The particles are detected by the MCP-PMT as they emit Cherenkov light in its quartz window.
-The signal from the mesh APD was amplified by an ASIC\,\cite{whiteACES2014} with a gain of 5\,mV/fC.
-The ASIC provides a differential output of the amplified signal.
+The signal from the mesh APD was amplified by an ASIC (FASTAMP) fabricated in a sub micron Silicon Germanium bipolar process designed by the University of Pennsylvania Instrumentation group\,\cite{whiteACES2014}.
+Each channel consists of a pseudo-differential preamplifier followed by a short time constant shaping stage with two selectable gains of 2 and 5\,mV/fC and a differential driver output stage.
+The results reported here are from the 5\,mV/fC gain setting.
+The pseudo-differential input stage and sub-ns peaking time results in an equivalent input noise charge of $\approx$ 3000\,e$^-$ for a sensor capacitance of $\approx$ 20\,pF.    
 The signals were digitised using a 2.5\,GHz 10\,GSa/s oscilloscope triggered using the MCP-PMT signal.
 As the leading edge of the MCP-PMT signal contained too few points for being directly used as a time reference, the measurement of time difference ($\Delta t$) is done with respect to the oscilloscope trigger.
 The time walk effect due to the varying amplitude of the MCP-PMT signal was corrected in the offline analysis.
